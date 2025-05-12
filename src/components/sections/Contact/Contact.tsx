@@ -17,15 +17,6 @@ import EmailCopy from '@app/components/EmailCopy/EmailCopy';
 import MaxwidthContainer from '@app/components/MaxwidthContainer/MaxwidthContainer';
 import BackgroundSection from '@app/components/BackgroundSection/BackgroundSection';
 
-const links: IconLink[] = [
-  { type: 'bandcamp' },
-  { type: 'instagram' },
-  { type: 'youtube' },
-  { type: 'tiktok' },
-  { type: 'spotify' },
-  { type: 'appleMusic' },
-];
-
 const Contact: FC = () => {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
@@ -123,7 +114,7 @@ const Contact: FC = () => {
           </Text>
           <EmailCopy email="contact@g-emma.com" label="Email" />
           <EmailCopy email="booking@g-emma.com" label="Booking" />
-          <LinkContainer className={styles.contactLinkContainer} iconLinks={links} hasToolTip />
+          <LinkContainer className={styles.contactLinkContainer} hasToolTip />
         </Flex>
       </MaxwidthContainer>
     </BackgroundSection>

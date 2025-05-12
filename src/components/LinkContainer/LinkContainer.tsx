@@ -22,7 +22,7 @@ const formatIdName = (input: string): string => {
 
 export const linksDefault: IconLink[] = [
   { type: 'instagram' },
-  { type: 'tiktok' },
+  /*   { type: 'tiktok' }, */
   { type: 'spotify' },
   { type: 'appleMusic' },
   { type: 'youtube' },
@@ -62,7 +62,7 @@ const LinkContainer: FC<Props> = ({
               icon: <FaSpotify />,
               link:
                 icon.link ||
-                'https://open.spotify.com/artist/6ZEMlHydJRHREpHwmNza4T?si=L5NhpgmwSmO2AmJAjRnxWw',
+                'https://open.spotify.com/artist/2exD65g1VYHPO0w4nMHAyO?si=KkAfIwDdREW5z9QIzzNkZA',
             };
           case 'email':
             return { id: 'email', icon: <FaEnvelope />, link: 'mailto:contact@g-emma.com' };
@@ -70,19 +70,19 @@ const LinkContainer: FC<Props> = ({
             return {
               id: 'instagram',
               icon: <FaInstagram />,
-              link: 'https://www.instagram.com/gemma.msc/',
+              link: 'https://www.instagram.com/frago.mp3/',
             };
           case 'appleMusic':
             return {
               id: 'appleMusic',
               icon: <FaMusic />,
-              link: icon.link || 'https://music.apple.com/dk/artist/gemma/1469747172',
+              link: icon.link || 'https://music.apple.com/de/artist/frago/1718527067',
             };
           case 'youtube':
             return {
               id: 'youtube',
               icon: <FaYoutube />,
-              link: 'https://youtube.com/channel/UCAIXGihT2_TrYTazM_hkz2w?si=_FBfx7tTdjTPl9on',
+              link: 'https://www.youtube.com/@frago.mp3',
             };
           case 'bandcamp':
             return {
