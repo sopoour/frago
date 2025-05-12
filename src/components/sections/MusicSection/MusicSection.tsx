@@ -47,7 +47,7 @@ const MusicSection: FC = () => {
             size={isMobile ? '24px' : '32px'}
             fw={600}
             ff="Hind Vadodara"
-            c={'g-dark.9'}
+            c={'primary.9'}
             ta="center"
             style={{ padding: '0 16px' }}
             component="h3"

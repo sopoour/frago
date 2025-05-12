@@ -74,7 +74,7 @@ const Layout: FC<Props> = ({ children }) => {
   return (
     <AppShell
       header={{ height: 64 }}
-      bg={'g-dark.0'}
+      bg={'grey.0'}
       padding="md"
       styles={{
         root: { '--app-shell-border-color': 'transparent' },
@@ -103,7 +103,7 @@ const Layout: FC<Props> = ({ children }) => {
               onClick={toggle}
               hiddenFrom="md"
               size="sm"
-              color="g-dark.9"
+              color="primary.9"
               aria-label="Toggle navigation menu"
             />
           </Group>
@@ -136,7 +136,7 @@ const Layout: FC<Props> = ({ children }) => {
         {children}
       </AppShell.Main>
       {/* <AppShell.Section
-        bg={'g-dark.4'}
+        bg={'grey.4'}
         style={{
           display: 'flex',
           justifyContent: 'center',
@@ -176,7 +176,7 @@ const Layout: FC<Props> = ({ children }) => {
                   style={{ objectFit: 'cover' }}
                 />
               )}
-              <Text c={'g-dark.0'} size="12px" lh={1.5}>
+              <Text c={'grey.0'} size="12px" lh={1.5}>
                 {item?.description}
               </Text>
             </Flex>
@@ -185,8 +185,8 @@ const Layout: FC<Props> = ({ children }) => {
       </AppShell.Section> */}
       <AppShell.Section
         component="footer"
-        bg="g-dark.9"
-        color="g-dark.0"
+        bg="primary.9"
+        color="grey.0"
         style={{
           display: 'flex',
           justifyContent: 'center',
@@ -201,7 +201,7 @@ const Layout: FC<Props> = ({ children }) => {
             <Anchor href="/impressum" className={styles.footerLink} size="14px">
               Impressum
             </Anchor>
-            <Text c={'g-dark.0'} fw={600} size="14px">
+            <Text c={'grey.0'} fw={600} size="14px">
               |
             </Text>
             <Anchor href="/privacy-policy" className={styles.footerLink} size="14px">
@@ -209,13 +209,13 @@ const Layout: FC<Props> = ({ children }) => {
             </Anchor>
           </Flex>
           <Flex gap={8} align={'center'} direction={{ base: 'column', sm: 'row' }}>
-            <Text c={'g-dark.0'} size="14px">
+            <Text c={'grey.0'} size="14px">
               © {currentYear} FRAGO.
             </Text>
-            <Text c={'g-dark.0'} size="14px">
+            <Text c={'grey.0'} size="14px">
               Developed by{' '}
               <Anchor
-                c={'g-dark.0'}
+                c={'grey.0'}
                 size="14px"
                 href="https://www.sophiaauer.me/"
                 target="_blank"

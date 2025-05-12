@@ -33,12 +33,12 @@
     width: 50%;
     height: 100%;
     padding: 0;
-    background-color: var(--mantine-color-g-dark-2);
+    background-color: var(--mantine-color-grey-2);
     transform-style: preserve-3d;
     cursor: pointer;
     transform: rotateY(calc(var(--offset) * 50deg)) scaleY(calc(1 + var(--absOffset) * -0.4)) translateZ(calc(var(--absOffset) * -30rem)) translateX(calc(var(--direction) * -5rem));
     filter: blur(calc(var(--absOffset) * 0.75rem));
-    box-shadow: 0 60px 50px -60px var(--mantine-color-g-dark-9);
+    box-shadow: 0 60px 50px -60px var(--mantine-color-primary-9);
     @include slow-transition;
 
     img {
@@ -97,7 +97,7 @@
         text-align: center;
         border-radius: 4px;
         padding: 4px 12px;
-        color: var(--mantine-color-g-dark-9);
+        color: var(--mantine-color-primary-9);
         z-index: 10;
         background-color: var(--bg-content);
     }
@@ -109,7 +109,7 @@
         border-radius: 8px;
         width: 100%;
         height: 70%;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--mantine-color-g-dark-3) 100%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--mantine-color-primary-3) 100%);
     }
 
     &:hover {
@@ -155,13 +155,13 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    box-shadow: 0 60px 50px -60px var(--mantine-color-g-dark-2);
+    box-shadow: 0 60px 50px -60px var(--mantine-color-grey-2);
     padding: 32px;
     width: 100%;
     height: 100%;
     opacity: 0;
     @include slow-transition;
-    background-color: var(--mantine-color-g-dark-2);
+    background-color: var(--mantine-color-grey-2);
     background-image: none;
     border-radius: 10px;
     position: relative;

@@ -61,7 +61,7 @@ const Contact: FC = () => {
   return (
     <BackgroundSection
       id="contact"
-      background="linear-gradient(160deg, var(--mantine-color-g-dark-0) 35%, var(--mantine-color-g-dark-3) 100% )"
+      background="linear-gradient(180deg, var(--mantine-color-grey-0) 0%, var(--mantine-color-grey-4) 100%)"
     >
       <MaxwidthContainer id="contact" className={styles.contactSection}>
         <VisuallyHidden component={'h2'}>Contact</VisuallyHidden>
@@ -105,11 +105,11 @@ const Contact: FC = () => {
             </Button>
           </Group>
 
-          {status === 'sent' && <Text c="g-dark.5">Message sent successfully!</Text>}
+          {status === 'sent' && <Text c="primary.5">Message sent successfully!</Text>}
           {status === 'error' && <Text c="red">Something went wrong. Please try again.</Text>}
         </form>
         <Flex gap={'32px'} direction={'column'} align={{ base: 'center', sm: 'flex-start' }}>
-          <Text size="24px" ff={'Hind Vadodara'} c={'g-dark.9'} fw={600} component="h3">
+          <Text size="24px" ff={'Hind Vadodara'} c={'primary.9'} fw={600} component="h3">
             Or reach us at
           </Text>
           <EmailCopy email="contact@g-emma.com" label="Email" />

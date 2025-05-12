@@ -26,7 +26,7 @@ const LiveSection: FC<Props> = ({ title, shows, shownEventsNumber = 3, pastShows
             : styles.liveGridSection
         }
       >
-        <Text size="20px" fw={600} ff="Hind Vadodara" c={'g-dark.9'} id="showTitle" component="h3">
+        <Text size="20px" fw={600} ff="Hind Vadodara" c={'primary.9'} id="showTitle" component="h3">
           {title}
         </Text>
       </Grid.Col>
@@ -57,7 +57,7 @@ const LiveSection: FC<Props> = ({ title, shows, shownEventsNumber = 3, pastShows
               radius="md"
               rightSection={<IoIosArrowDown />}
               style={{
-                color: 'var(--mantine-color-g-dark-9)',
+                color: 'var(--mantine-color-primary-9)',
                 fontSize: '16px',
               }}
             >

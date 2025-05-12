@@ -15,7 +15,7 @@
         transition: all 0.3s ease-in-out;
 
         path {
-            fill: var(--mantine-color-g-dark-9);
+            fill: var(--mantine-color-primary-9);
         }
 
         &:hover {
@@ -23,7 +23,7 @@
             transform: scale(1.2);
 
             path {
-                fill: var(--mantine-color-g-dark-4);
+                fill: var(--mantine-color-primary-4);
             }
         }
     }

@@ -21,7 +21,7 @@ const EmailCopy: FC<Props> = ({ email, label }) => {
       label={copied ? 'Copied!' : 'Copy to clipboard'}
       withArrow
       position="bottom"
-      color="g-dark.5"
+      color="primary.5"
       offset={12}
       transitionProps={{ transition: 'pop', duration: 300 }}
       events={{ hover: true, focus: true, touch: true }}
@@ -29,7 +29,7 @@ const EmailCopy: FC<Props> = ({ email, label }) => {
       <Text
         size="16px"
         fw={500}
-        c={'g-dark.9'}
+        c={'primary.9'}
         onClick={() => copyEmail(email)}
         className={styles.copyEmail}
         onMouseLeave={() => setCopied(false)}

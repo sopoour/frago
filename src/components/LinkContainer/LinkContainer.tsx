@@ -114,7 +114,7 @@ const LinkContainer: FC<Props> = ({
               item.link && (
                 <Tooltip
                   label={formatIdName(item.id)}
-                  color="g-dark.5"
+                  color="primary.5"
                   position="bottom"
                   offset={12}
                   openDelay={500}

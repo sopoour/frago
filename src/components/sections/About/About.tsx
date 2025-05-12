@@ -14,7 +14,7 @@ const About: FC = () => {
   return (
     <BackgroundSection
       id="about"
-      background="linear-gradient(210deg, var(--mantine-color-g-dark-0) 50%, var(--mantine-color-g-dark-0) 100%)"
+      background="linear-gradient(180deg, var(--mantine-color-grey-6) 40%, var(--mantine-color-grey-0) 100%)"
     >
       <MaxwidthContainer id="about">
         <VisuallyHidden component={'h2'}>About</VisuallyHidden>
@@ -33,7 +33,7 @@ const About: FC = () => {
               style={{ objectFit: 'cover' }}
             />
           </span>
-          <Text c={'g-dark.9'} size="xl" fw={500} ta="justify">
+          <Text c={'primary.9'} size="xl" fw={500} ta="justify">
             {data?.aboutDescription ||
               'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'}
           </Text>

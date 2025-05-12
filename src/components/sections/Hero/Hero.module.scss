@@ -42,14 +42,14 @@
         height: 30px !important;
 
         path {
-            fill: var(--mantine-color-g-dark-9);
+            fill: var(--mantine-color-primary-9);
         }
     }
 
     &:hover {
 
         svg>path {
-            fill: var(--mantine-color-g-dark-4);
+            fill: var(--mantine-color-primary-4);
         }
     }
 }

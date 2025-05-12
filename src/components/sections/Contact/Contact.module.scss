@@ -6,11 +6,11 @@
     gap: 20px;
     padding: 32px;
     border-radius: 10px;
-    background: var(--mantine-color-g-dark-2);
+    background: var(--mantine-color-grey-1);
 
     label {
         margin-bottom: 8px;
-        color: var(--mantine-color-g-dark-9)
+        color: var(--mantine-color-primary-9)
     }
 
     @media only screen and (max-width: $mantine-breakpoint-sm) {

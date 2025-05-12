@@ -88,7 +88,7 @@ const MusicCard: FC<Props> = ({ music, activeIndex, musicIndex, onActiveCardChan
               opacity: Math.abs(activeIndex - musicIndex) >= MAX_VISIBILITY ? '0' : '1',
               display: Math.abs(activeIndex - musicIndex) > MAX_VISIBILITY ? 'none' : 'block',
               pointerEvents: activeIndex === musicIndex ? 'auto' : 'none',
-              '--bg-content': music.description ? 'var(--mantine-color-g-dark-2)' : 'transparent',
+              '--bg-content': music.description ? 'var(--mantine-color-grey-2)' : 'transparent',
             }
       }
       ref={ref}
@@ -98,12 +98,12 @@ const MusicCard: FC<Props> = ({ music, activeIndex, musicIndex, onActiveCardChan
     >
       <div className={styles.musicCardContent}>
         <div className={styles.musicCardHeader}>
-          <Text fw={600} ff={'Hind Vadodara'} size="20px" c={'g-dark.9'}>
+          <Text fw={600} ff={'Hind Vadodara'} size="20px" c={'primary.9'}>
             {music.musicTitle}
           </Text>
           <LinkContainer iconLinks={mappedLinks} size="small" />
         </div>
-        {music.description && <Text c={'g-dark.9'}>{music.description}</Text>}
+        {music.description && <Text c={'primary.9'}>{music.description}</Text>}
       </div>
       <ContentfulImage
         src={music.musicCover?.url || ''}
@@ -120,7 +120,7 @@ const MusicCard: FC<Props> = ({ music, activeIndex, musicIndex, onActiveCardChan
             : styles.musicCardContentMobile
         }
       >
-        <Text fw={600} ff={'Hind Vadodara'} size="18px" c={'g-dark.9'}>
+        <Text fw={600} ff={'Hind Vadodara'} size="18px" c={'primary.9'}>
           {music.musicTitle}
         </Text>
         <LinkContainer iconLinks={mappedLinks} size="small" />
