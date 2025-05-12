@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/sopoour/g-emma/main/src/assets/logo.png" width="100" />
+  <img alt="Logo" src="https://raw.githubusercontent.com/sopoour/frago/main/src/assets/logo.png" width="100" />
 </div>
 <h1 align="center">
  FRAGO website - will be probs on frago.com
@@ -8,7 +8,7 @@
   A website for a new music project called FRAGO <a href="https:/frago.com" target="_blank">frago.com</a> built with React, Next.js, Mantine component library and hosted with Vercel
 </p>
 
-![demo](https://raw.githubusercontent.com/sopoour/g-emma/main/src/assets/demo.png)
+![demo](https://raw.githubusercontent.com/sopoour/frago/main/src/assets/demo.png)
 
 ## Tech stack overview
 
