@@ -5,7 +5,7 @@
  FRAGO website - will be probs on frago.com
 </h1>
 <p align="center">
-  A website for a new music project called FRAGO <a href="https:/frago.com" target="_blank">frago.com</a> built with React, Next.js, Mantine component library and hosted with Vercel
+  A website for a new music project called FRAGO <a href="https://frago.com" target="_blank">frago.com</a> built with React, Next.js, Mantine component library and hosted with Vercel
 </p>
 
 ![demo](https://raw.githubusercontent.com/sopoour/frago/main/src/assets/demo.png)
