@@ -1,0 +1,97 @@
+@use '../../../styles/variables.module.scss' as *;
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.background {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.arrowButtonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    opacity: 0;
+    animation: fade-in 1.5s forwards 5.75s;
+    -webkit-animation: fade-in 1.5s forwards 5.75s;
+    transition: all 0.3s ease-in-out;
+
+    @media only screen and (max-width: $mantine-breakpoint-sm) {
+        left: 43%;
+    }
+
+    svg {
+        width: 30px !important;
+        height: 30px !important;
+
+        path {
+            fill: var(--mantine-color-g-dark-9);
+        }
+    }
+
+    &:hover {
+
+        svg>path {
+            fill: var(--mantine-color-g-dark-4);
+        }
+    }
+}
+
+.arrowFadeElement {
+    transition-duration: 400ms;
+    opacity: 0.45;
+    animation: downOne 3s ease-in-out infinite;
+    margin-top: -25px;
+
+    &:last-of-type {
+        opacity: 0.2;
+        animation: downTwo 3s ease-in-out infinite;
+    }
+
+    @keyframes downOne {
+        0% {
+            transform: translateY(-4px);
+        }
+
+        40%,
+        60% {
+            transform: translateY(20%);
+        }
+
+        100% {
+            transform: translateY(-4px);
+        }
+    }
+
+    @keyframes downTwo {
+        0% {
+            transform: translateY(-8px);
+        }
+
+        40%,
+        60% {
+            transform: translateY(40%);
+        }
+
+        100% {
+            transform: translateY(-8px);
+        }
+    }
+}

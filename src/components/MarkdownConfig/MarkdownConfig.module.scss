@@ -1,0 +1,33 @@
+@use '../../styles/variables.module.scss' as *;
+
+.markdown {
+
+    li {
+        line-height: 2;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    a {
+        color: var(--mantine-color-g-dark-6);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline !important;
+        }
+
+    }
+
+    h1 {
+        font-size: 36px;
+        font-family: "Hind Vadodara";
+    }
+
+    @media (max-width: $mantine-breakpoint-sm) {
+        h1 {
+            font-size: 28px;
+        }
+    }
+}

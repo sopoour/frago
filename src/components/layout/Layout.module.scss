@@ -1,0 +1,95 @@
+@use '../../styles/variables.module.scss' as *;
+
+.navLink {
+    font-weight: 600;
+    color: var(--mantine-color-g-dark-9);
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    margin-right: 12px;
+    font-size: var(--mantine-font-size-lg);
+
+    &:hover {
+        color: var(--mantine-color-g-dark-5);
+        background-color: transparent;
+        scale: 1.1;
+    }
+}
+
+
+.linkContainerMobile {
+    padding-inline: var(--mantine-spacing-xl);
+    padding-block: var(--mantine-spacing-xl);
+    flex-wrap: wrap;
+}
+
+.navbarBg {
+    background-color: transparent;
+    transition: all 0.3s ease, color 0.3s ease;
+
+    path {
+        fill: var(--mantine-color-g-dark-9);
+    }
+}
+
+.navbarScrolled {
+    background: rgba(83, 83, 86, 0.1);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+
+    .navLink {
+        color: var(--mantine-color-g-dark-9);
+
+        &:hover {
+            color: var(--mantine-color-g-dark-4);
+        }
+
+        &:not(.active) {
+            cursor: pointer;
+        }
+
+        &.active {
+            color: var(--mantine-color-g-dark-4);
+            background-color: transparent;
+        }
+
+
+    }
+
+    svg {
+        path {
+            fill: var(--mantine-color-g-dark-9) !important;
+        }
+
+
+        &:hover {
+            path {
+                fill: var(--mantine-color-g-dark-4) !important;
+            }
+
+        }
+    }
+}
+
+.footerLink {
+    color: var(--mantine-color-g-dark-0);
+    font-weight: 600;
+
+    &:hover {
+        text-decoration: underline !important;
+        color: var(--mantine-color-g-dark-2) !important;
+    }
+}
+
+.supportLogos {
+    max-width: 35%;
+
+    @media only screen and (max-width: $mantine-breakpoint-sm) {
+        max-width: unset;
+
+        width: 100%;
+
+        p {
+            text-align: center;
+        }
+    }
+}

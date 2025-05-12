@@ -1,0 +1,15 @@
+@use '../../styles/variables.module.scss' as *;
+
+.sectionContainer {
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+
+    @media (max-width: $mantine-breakpoint-sm) {
+        min-height: unset;
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+}

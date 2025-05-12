@@ -1,0 +1,56 @@
+@use '../../../styles/variables.module.scss' as *;
+
+.liveRow {
+    padding: 12px 4px;
+    border-top: 1px solid var(--mantine-color-g-dark-7);
+    width: 100%;
+}
+
+.liveRowLinked {
+    &:hover {
+        background: rgba(202, 204, 232, 30%);
+    }
+}
+
+.liveRowCol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.liveGridPastShows {
+    margin-top: 36px;
+
+    @media (max-width: $mantine-breakpoint-sm) {
+        margin-top: 0;
+
+        [id^="showTitle"] {
+            margin-top: 32px
+        }
+    }
+}
+
+.liveGridSection {
+    position: relative;
+
+    >.liveRow:last-child {
+        border-bottom: 1px solid var(--mantine-color-g-dark-7);
+    }
+}
+
+.showMore {
+    display: flex;
+    justify-content: center;
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        bottom: 50px;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--mantine-color-g-dark-0) 100%);
+        transition: opacity 0.3s ease;
+    }
+}

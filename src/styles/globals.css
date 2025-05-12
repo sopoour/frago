@@ -1,0 +1,31 @@
+:root[data-mantine-color-scheme='light'] {
+    --mantine-color-body: var(--mantine-color-g-dark-0) !important;
+}
+
+a, button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+    text-decoration: none !important;
+    font-size: inherit;
+    outline: none;
+    background: none;
+    border-width: 0;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+// visually hide any element accesibly (e.g. you need an h1 element on a page but dont wanna visually show it)
+
+.sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }

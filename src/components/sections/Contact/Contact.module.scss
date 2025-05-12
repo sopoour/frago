@@ -1,0 +1,37 @@
+@use '../../../styles/variables.module.scss' as *;
+
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 32px;
+    border-radius: 10px;
+    background: var(--mantine-color-g-dark-1);
+
+    label {
+        margin-bottom: 8px;
+        color: var(--mantine-color-g-dark-9)
+    }
+
+    @media only screen and (max-width: $mantine-breakpoint-sm) {
+        padding: 16px;
+    }
+}
+
+.contactSection {
+    gap: 48px;
+    justify-content: center;
+
+    @media only screen and (max-width: $mantine-breakpoint-sm) {
+        flex-direction: column;
+    }
+}
+
+.contactLinkContainer {
+    gap: 16px !important;
+    margin-top: 32px;
+
+    @media only screen and (max-width: $mantine-breakpoint-sm) {
+        margin-top: 16px;
+    }
+}

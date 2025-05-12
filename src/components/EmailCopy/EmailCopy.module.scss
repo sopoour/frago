@@ -1,0 +1,7 @@
+.copyEmail {
+    cursor: pointer;
+
+    &:hover {
+        color: var(--mantine-color-g-dark-7) !important;
+    }
+}
