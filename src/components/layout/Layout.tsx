@@ -88,7 +88,7 @@ const Layout: FC<Props> = ({ children }) => {
             </Group>
             <Image
               src={Logo.src}
-              alt="G'emma Logo"
+              alt="FRAGO Logo"
               style={{ maxHeight: '45px', cursor: 'pointer' }}
               onClick={() => {
                 animateScroll.scrollTo(0, { smooth: true, duration: 800 });

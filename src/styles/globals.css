@@ -2,6 +2,12 @@
     --mantine-color-body: var(--mantine-color-g-dark-0) !important;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 a, button{
     -webkit-appearance: none;
     -moz-appearance: none;

@@ -12,7 +12,10 @@ import AboutImage from '@app/assets/About.png';
 const About: FC = () => {
   const { data, isLoading } = useSWR<GeneralContent | null>('/api/generalContent', fetcher);
   return (
-    <BackgroundSection id="about" background="linear-gradient(210deg, #F4F6FB 50%, #F4F6FB 100%)">
+    <BackgroundSection
+      id="about"
+      background="linear-gradient(210deg, var(--mantine-color-g-dark-0) 50%, var(--mantine-color-g-dark-0) 100%)"
+    >
       <MaxwidthContainer id="about">
         <VisuallyHidden component={'h2'}>About</VisuallyHidden>
         <SimpleGrid

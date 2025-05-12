@@ -61,7 +61,7 @@ const Contact: FC = () => {
   return (
     <BackgroundSection
       id="contact"
-      background="linear-gradient(160deg, #F4F6FB 35%, #F4F6FB 100% )"
+      background="linear-gradient(160deg, var(--mantine-color-g-dark-0) 35%, var(--mantine-color-g-dark-3) 100% )"
     >
       <MaxwidthContainer id="contact" className={styles.contactSection}>
         <VisuallyHidden component={'h2'}>Contact</VisuallyHidden>

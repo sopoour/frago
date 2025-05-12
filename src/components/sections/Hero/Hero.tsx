@@ -24,30 +24,28 @@ const Hero = forwardRef<HTMLDivElement>((props, ref) => {
         position: 'relative',
       }}
     >
-      <div style={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden' }}>
-        <VisuallyHidden component={'h1'}>FRAGO Music</VisuallyHidden>
-        <ContentfulImage
-          src={
-            /* !!generalContentData?.heroImage?.url && !isLoading
+      <VisuallyHidden component={'h1'}>FRAGO Music</VisuallyHidden>
+      <ContentfulImage
+        src={
+          /* !!generalContentData?.heroImage?.url && !isLoading
               ? generalContentData?.heroImage?.url
               :  */ HeroImage.src
-          }
-          fill
-          style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
-          priority
-          alt={'Hero Background'}
-        />
+        }
+        fill
+        style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
+        priority
+        alt={'Hero Background'}
+      />
 
-        <button
-          className={styles.arrowButtonContainer}
-          onClick={() => scroller.scrollTo('live', { smooth: true, duration: 800 })}
-          title="Scroll down to see the latest live shows"
-        >
-          <IoIosArrowDown />
-          <IoIosArrowDown className={styles.arrowFadeElement} />
-          <IoIosArrowDown className={styles.arrowFadeElement} />
-        </button>
-      </div>
+      <button
+        className={styles.arrowButtonContainer}
+        onClick={() => scroller.scrollTo('live', { smooth: true, duration: 800 })}
+        title="Scroll down to see the latest live shows"
+      >
+        <IoIosArrowDown />
+        <IoIosArrowDown className={styles.arrowFadeElement} />
+        <IoIosArrowDown className={styles.arrowFadeElement} />
+      </button>
     </div>
   );
 });
