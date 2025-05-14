@@ -5,7 +5,7 @@ export default async function getGeneralContent(req: NextApiRequest, res: NextAp
   try {
     const data = await fetchGraphQL(
       `query {
-        generalContent(id: "pDQPa1PkSlTOC4H4Mxg1o") {
+        generalContent(id: "65MqWpnKRpyeA203wOzf8o") {
             aboutDescription
             aboutImage {
               url
@@ -15,17 +15,6 @@ export default async function getGeneralContent(req: NextApiRequest, res: NextAp
             heroImage {
               url
             } 
-            impressum
-            privacyPolicy
-            supportLogosCollection {
-              items {
-                title
-                description
-                url
-                width
-                height
-              }
-          }
         }
       }`,
     );

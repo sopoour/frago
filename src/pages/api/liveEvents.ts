@@ -5,11 +5,10 @@ export default async function getLiveEvents(req: NextApiRequest, res: NextApiRes
   try {
     const data = await fetchGraphQL(
       `query {
-            liveEventsCollection(limit: 1000) {
+            liveEventCollection(limit: 1000) {
               items {
-                constellation
                 date
-                eventType
+                venue
                 location
                 ticketLink
                 ticketNotiz
@@ -18,7 +17,7 @@ export default async function getLiveEvents(req: NextApiRequest, res: NextApiRes
           }`,
     );
 
-    res.status(200).json(data.data.liveEventsCollection.items);
+    res.status(200).json(data.data.liveEventCollection.items);
   } catch (error) {
     res.status(500).json({ error: 'Internal Server Error' });
   }
