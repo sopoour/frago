@@ -26,7 +26,7 @@ const LiveSection: FC<Props> = ({ title, shows, shownEventsNumber = 3, pastShows
             : styles.liveGridSection
         }
       >
-        <Text size="20px" fw={600} ff="Hind Vadodara" c={'primary.9'} id="showTitle" component="h3">
+        <Text size="20px" fw={600} ff="Oswald" c={'primary.9'} id="showTitle" component="h3">
           {title}
         </Text>
       </Grid.Col>

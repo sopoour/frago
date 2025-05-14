@@ -98,7 +98,7 @@ const MusicCard: FC<Props> = ({ music, activeIndex, musicIndex, onActiveCardChan
     >
       <div className={styles.musicCardContent}>
         <div className={styles.musicCardHeader}>
-          <Text fw={600} ff={'Hind Vadodara'} size="20px" c={'primary.9'}>
+          <Text fw={600} ff={'Oswald'} size="20px" c={'primary.9'}>
             {music.musicTitle}
           </Text>
           <LinkContainer iconLinks={mappedLinks} size="small" />
@@ -120,7 +120,7 @@ const MusicCard: FC<Props> = ({ music, activeIndex, musicIndex, onActiveCardChan
             : styles.musicCardContentMobile
         }
       >
-        <Text fw={600} ff={'Hind Vadodara'} size="18px" c={'primary.9'}>
+        <Text fw={600} ff={'Oswald'} size="18px" c={'primary.9'}>
           {music.musicTitle}
         </Text>
         <LinkContainer iconLinks={mappedLinks} size="small" />
