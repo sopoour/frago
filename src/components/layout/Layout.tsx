@@ -89,7 +89,7 @@ const Layout: FC<Props> = ({ children }) => {
             <Image
               src={Logo.src}
               alt="FRAGO Logo"
-              style={{ maxHeight: '45px', cursor: 'pointer' }}
+              style={{ maxHeight: '25px', cursor: 'pointer' }}
               onClick={() => {
                 animateScroll.scrollTo(0, { smooth: true, duration: 800 });
                 router.pathname !== '/' && router.push('/');
@@ -113,7 +113,13 @@ const Layout: FC<Props> = ({ children }) => {
         <Image
           src={Logo.src}
           alt="G'emma Logo"
-          style={{ height: '45px', width: '45%', cursor: 'pointer', paddingLeft: '20px' }}
+          style={{
+            height: '45px',
+            width: '52%',
+            cursor: 'pointer',
+            paddingLeft: '30px',
+            paddingTop: '10px',
+          }}
           onClick={() => animateScroll.scrollTo(0, { smooth: true, duration: 800 })}
         />
         <Group
