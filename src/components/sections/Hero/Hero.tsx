@@ -10,11 +10,17 @@ import { VisuallyHidden } from '@mantine/core';
 import HeroImage from '@app/assets/Titelbild.png';
 
 const Hero = forwardRef<HTMLDivElement>((props, ref) => {
-  /* const { data: generalContentData, isLoading } = useSWR<GeneralContent | null>(
+  const { data: generalContentData, isLoading } = useSWR<GeneralContent | null>(
     '/api/generalContent',
     fetcher,
     {},
-  ); */
+  );
+
+  const scrollToNextSection = () => {
+    const current = document.activeElement;
+    const next = current?.closest('section')?.nextElementSibling;
+    next?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div
@@ -27,9 +33,9 @@ const Hero = forwardRef<HTMLDivElement>((props, ref) => {
       <VisuallyHidden component={'h1'}>FRAGO Music</VisuallyHidden>
       <ContentfulImage
         src={
-          /* !!generalContentData?.heroImage?.url && !isLoading
-              ? generalContentData?.heroImage?.url
-              :  */ HeroImage.src
+          !!generalContentData?.heroImage?.url && !isLoading
+            ? generalContentData?.heroImage?.url
+            : HeroImage.src
         }
         fill
         style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
@@ -39,8 +45,8 @@ const Hero = forwardRef<HTMLDivElement>((props, ref) => {
 
       <button
         className={styles.arrowButtonContainer}
-        onClick={() => scroller.scrollTo('about', { smooth: true, duration: 800 })}
-        title="Scroll down to see about"
+        onClick={() => scroller.scrollTo('live', { smooth: true, duration: 800 })}
+        title="Scroll down to see live"
       >
         <IoIosArrowDown />
         <IoIosArrowDown className={styles.arrowFadeElement} />

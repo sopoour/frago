@@ -21,7 +21,7 @@ const Videos: FC = () => {
           gap={{ base: 20, sm: 32 }}
           className={styles.videoContainer}
         >
-          <Text c={'primary.9'} size="20px" fw={600} ff="Hind Vadodara" component="h3">
+          <Text c={'primary.9'} size="20px" fw={600} ff="Oswald" component="h3">
             {video.title}
           </Text>
           <iframe

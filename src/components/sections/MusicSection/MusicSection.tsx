@@ -48,7 +48,7 @@ const MusicSection: FC = () => {
           <Text
             size={isMobile ? '24px' : '32px'}
             fw={600}
-            ff="Hind Vadodara"
+            ff="Oswald"
             c={'primary.9'}
             ta="center"
             style={{ padding: '0 16px' }}

@@ -22,7 +22,7 @@ const LiveRow: FC<Props> = ({ date, location, venue, ticketLink, ticketNotiz }) 
       className={isLinked ? `${styles.liveRowLinked} ${styles.liveRow}` : styles.liveRow}
     >
       <Grid.Col span={1}>
-        <Text fw={600} c={'primary.9'} size="lg">
+        <Text fw={600} c={'primary.9'} size="md">
           {date && ISOToDate(date)}
         </Text>
       </Grid.Col>

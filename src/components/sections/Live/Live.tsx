@@ -29,7 +29,7 @@ const Live: FC = () => {
   if (data && data?.length === 0) return null;
 
   return (
-    <BackgroundSection id="live" background="linear-gradient(165deg, #989696 0%, #F4F6FB 50%)">
+    <BackgroundSection id="live" background="var(--mantine-color-grey-2)">
       <MaxwidthContainer id="live">
         <VisuallyHidden component={'h2'}>Live Shows</VisuallyHidden>
         <Grid gutter="xl" style={{ width: '100%' }}>

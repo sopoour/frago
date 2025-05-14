@@ -109,7 +109,7 @@ const Contact: FC = () => {
           {status === 'error' && <Text c="red">Something went wrong. Please try again.</Text>}
         </form>
         <Flex gap={'32px'} direction={'column'} align={{ base: 'center', sm: 'flex-start' }}>
-          <Text size="24px" ff={'Hind Vadodara'} c={'primary.9'} fw={600} component="h3">
+          <Text size="24px" ff={'Oswald'} c={'primary.9'} fw={600} component="h3">
             Or reach us at
           </Text>
           <EmailCopy email="contact@g-emma.com" label="Email" />
