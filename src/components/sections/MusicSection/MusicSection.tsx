@@ -31,6 +31,8 @@ const MusicSection: FC = () => {
     if (arrowRightPressed && activeCard + 1 !== data?.length) handleNext();
   }, [arrowLeftPressed, arrowRightPressed]);
 
+  if (data && data?.length === 0) return null;
+
   return (
     <BackgroundSection
       id="music"

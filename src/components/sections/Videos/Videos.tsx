@@ -8,6 +8,9 @@ import MaxwidthContainer from '@app/components/MaxwidthContainer/MaxwidthContain
 
 const Videos: FC = () => {
   const { data, isLoading } = useSWR<Video[] | null>('/api/video', fetcher);
+
+  if (data && data?.length === 0) return null;
+
   return (
     <MaxwidthContainer id="videos" className={styles.videoSection} component={'section'}>
       <VisuallyHidden component={'h2'}>Videos</VisuallyHidden>

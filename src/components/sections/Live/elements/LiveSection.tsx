@@ -1,4 +1,4 @@
-import { LiveEvents } from '@app/services/graphql/types';
+import { LiveEvent } from '@app/services/graphql/types';
 import { Button, Grid, Text } from '@mantine/core';
 import { FC, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
@@ -7,7 +7,7 @@ import styles from '../Live.module.scss';
 
 type Props = {
   title: string;
-  shows?: LiveEvents[];
+  shows?: LiveEvent[];
   shownEventsNumber?: number;
   pastShows?: boolean;
 };
@@ -42,8 +42,7 @@ const LiveSection: FC<Props> = ({ title, shows, shownEventsNumber = 3, pastShows
           <LiveRow
             key={live.date}
             date={live.date}
-            constellation={live.constellation}
-            eventType={live.eventType}
+            venue={live.venue}
             location={live.location}
             ticketLink={live.ticketLink}
             ticketNotiz={live.ticketNotiz}

@@ -7,21 +7,14 @@ import Link from 'next/link';
 
 type Props = {
   date?: string;
-  eventType?: Maybe<string>;
+  venue?: Maybe<string>;
   location?: Maybe<string>;
   constellation?: Maybe<string>;
   ticketLink?: Maybe<string>;
   ticketNotiz?: Maybe<string>;
 };
 
-const LiveRow: FC<Props> = ({
-  date,
-  location,
-  eventType,
-  constellation,
-  ticketLink,
-  ticketNotiz,
-}) => {
+const LiveRow: FC<Props> = ({ date, location, venue, ticketLink, ticketNotiz }) => {
   const gridComponent = (isLinked: boolean) => (
     <Grid
       gutter={{ base: 's', xs: 'lg' }}
@@ -32,15 +25,10 @@ const LiveRow: FC<Props> = ({
         <Text fw={600} c={'primary.9'} size="lg">
           {date && ISOToDate(date)}
         </Text>
-        {constellation && (
-          <Text c={'primary.9'} size="md">
-            {constellation}
-          </Text>
-        )}
       </Grid.Col>
       <Grid.Col span={1}>
         <Text c={'primary.9'} size="md">
-          {eventType},
+          {venue},
         </Text>
         <Text c={'primary.9'} size="md">
           {location}

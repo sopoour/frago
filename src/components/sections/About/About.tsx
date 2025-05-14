@@ -11,6 +11,7 @@ import AboutImage from '@app/assets/About.png';
 
 const About: FC = () => {
   const { data, isLoading } = useSWR<GeneralContent | null>('/api/generalContent', fetcher);
+
   return (
     <BackgroundSection
       id="about"

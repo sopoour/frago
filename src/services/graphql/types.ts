@@ -293,7 +293,7 @@ export enum EntryOrder {
   SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
 }
 
-/** Content der sich nicht wiederholt auf der gesamten Website. Es sollte immer nur einen Content published sein [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/generalContent) */
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/generalContent) */
 export type GeneralContent = Entry & _Node & {
   __typename?: 'GeneralContent';
   _id: Scalars['ID']['output'];
@@ -301,63 +301,39 @@ export type GeneralContent = Entry & _Node & {
   aboutImage?: Maybe<Asset>;
   contentfulMetadata: ContentfulMetadata;
   heroImage?: Maybe<Asset>;
-  impressum?: Maybe<Scalars['String']['output']>;
   linkedFrom?: Maybe<GeneralContentLinkingCollections>;
-  privacyPolicy?: Maybe<Scalars['String']['output']>;
-  supportLogosCollection?: Maybe<AssetCollection>;
   sys: Sys;
   version?: Maybe<Scalars['String']['output']>;
 };
 
 
-/** Content der sich nicht wiederholt auf der gesamten Website. Es sollte immer nur einen Content published sein [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/generalContent) */
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/generalContent) */
 export type GeneralContentAboutDescriptionArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
 
-/** Content der sich nicht wiederholt auf der gesamten Website. Es sollte immer nur einen Content published sein [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/generalContent) */
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/generalContent) */
 export type GeneralContentAboutImageArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 
-/** Content der sich nicht wiederholt auf der gesamten Website. Es sollte immer nur einen Content published sein [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/generalContent) */
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/generalContent) */
 export type GeneralContentHeroImageArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 
-/** Content der sich nicht wiederholt auf der gesamten Website. Es sollte immer nur einen Content published sein [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/generalContent) */
-export type GeneralContentImpressumArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-/** Content der sich nicht wiederholt auf der gesamten Website. Es sollte immer nur einen Content published sein [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/generalContent) */
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/generalContent) */
 export type GeneralContentLinkedFromArgs = {
   allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 
-/** Content der sich nicht wiederholt auf der gesamten Website. Es sollte immer nur einen Content published sein [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/generalContent) */
-export type GeneralContentPrivacyPolicyArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-/** Content der sich nicht wiederholt auf der gesamten Website. Es sollte immer nur einen Content published sein [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/generalContent) */
-export type GeneralContentSupportLogosCollectionArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  locale?: InputMaybe<Scalars['String']['input']>;
-  preview?: InputMaybe<Scalars['Boolean']['input']>;
-  skip?: InputMaybe<Scalars['Int']['input']>;
-};
-
-
-/** Content der sich nicht wiederholt auf der gesamten Website. Es sollte immer nur einen Content published sein [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/generalContent) */
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/generalContent) */
 export type GeneralContentVersionArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
@@ -383,21 +359,6 @@ export type GeneralContentFilter = {
   aboutImage_exists?: InputMaybe<Scalars['Boolean']['input']>;
   contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
   heroImage_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  impressum?: InputMaybe<Scalars['String']['input']>;
-  impressum_contains?: InputMaybe<Scalars['String']['input']>;
-  impressum_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  impressum_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  impressum_not?: InputMaybe<Scalars['String']['input']>;
-  impressum_not_contains?: InputMaybe<Scalars['String']['input']>;
-  impressum_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  privacyPolicy?: InputMaybe<Scalars['String']['input']>;
-  privacyPolicy_contains?: InputMaybe<Scalars['String']['input']>;
-  privacyPolicy_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  privacyPolicy_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  privacyPolicy_not?: InputMaybe<Scalars['String']['input']>;
-  privacyPolicy_not_contains?: InputMaybe<Scalars['String']['input']>;
-  privacyPolicy_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  supportLogosCollection_exists?: InputMaybe<Scalars['Boolean']['input']>;
   sys?: InputMaybe<SysFilter>;
   version?: InputMaybe<Scalars['String']['input']>;
   version_contains?: InputMaybe<Scalars['String']['input']>;
@@ -435,6 +396,7 @@ export enum GeneralContentOrder {
 }
 
 export enum ImageFormat {
+  /** AVIF image format. */
   Avif = 'AVIF',
   /** JPG image format. */
   Jpg = 'JPG',
@@ -529,81 +491,67 @@ export type ImageTransformOptions = {
   width?: InputMaybe<Scalars['Dimension']['input']>;
 };
 
-/** Live Event Collection Type, wo ein Content entry pro Event erstellt wird [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/liveEvents) */
-export type LiveEvents = Entry & _Node & {
-  __typename?: 'LiveEvents';
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/liveEvent) */
+export type LiveEvent = Entry & _Node & {
+  __typename?: 'LiveEvent';
   _id: Scalars['ID']['output'];
-  constellation?: Maybe<Scalars['String']['output']>;
   contentfulMetadata: ContentfulMetadata;
   date?: Maybe<Scalars['DateTime']['output']>;
-  eventType?: Maybe<Scalars['String']['output']>;
-  linkedFrom?: Maybe<LiveEventsLinkingCollections>;
+  linkedFrom?: Maybe<LiveEventLinkingCollections>;
   location?: Maybe<Scalars['String']['output']>;
   sys: Sys;
   ticketLink?: Maybe<Scalars['String']['output']>;
   ticketNotiz?: Maybe<Scalars['String']['output']>;
+  venue?: Maybe<Scalars['String']['output']>;
 };
 
 
-/** Live Event Collection Type, wo ein Content entry pro Event erstellt wird [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/liveEvents) */
-export type LiveEventsConstellationArgs = {
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/liveEvent) */
+export type LiveEventDateArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
 
-/** Live Event Collection Type, wo ein Content entry pro Event erstellt wird [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/liveEvents) */
-export type LiveEventsDateArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-/** Live Event Collection Type, wo ein Content entry pro Event erstellt wird [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/liveEvents) */
-export type LiveEventsEventTypeArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-/** Live Event Collection Type, wo ein Content entry pro Event erstellt wird [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/liveEvents) */
-export type LiveEventsLinkedFromArgs = {
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/liveEvent) */
+export type LiveEventLinkedFromArgs = {
   allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 
-/** Live Event Collection Type, wo ein Content entry pro Event erstellt wird [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/liveEvents) */
-export type LiveEventsLocationArgs = {
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/liveEvent) */
+export type LiveEventLocationArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
 
-/** Live Event Collection Type, wo ein Content entry pro Event erstellt wird [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/liveEvents) */
-export type LiveEventsTicketLinkArgs = {
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/liveEvent) */
+export type LiveEventTicketLinkArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
 
-/** Live Event Collection Type, wo ein Content entry pro Event erstellt wird [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/liveEvents) */
-export type LiveEventsTicketNotizArgs = {
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/liveEvent) */
+export type LiveEventTicketNotizArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type LiveEventsCollection = {
-  __typename?: 'LiveEventsCollection';
-  items: Array<Maybe<LiveEvents>>;
+
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/liveEvent) */
+export type LiveEventVenueArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type LiveEventCollection = {
+  __typename?: 'LiveEventCollection';
+  items: Array<Maybe<LiveEvent>>;
   limit: Scalars['Int']['output'];
   skip: Scalars['Int']['output'];
   total: Scalars['Int']['output'];
 };
 
-export type LiveEventsFilter = {
-  AND?: InputMaybe<Array<InputMaybe<LiveEventsFilter>>>;
-  OR?: InputMaybe<Array<InputMaybe<LiveEventsFilter>>>;
-  constellation?: InputMaybe<Scalars['String']['input']>;
-  constellation_contains?: InputMaybe<Scalars['String']['input']>;
-  constellation_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  constellation_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  constellation_not?: InputMaybe<Scalars['String']['input']>;
-  constellation_not_contains?: InputMaybe<Scalars['String']['input']>;
-  constellation_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+export type LiveEventFilter = {
+  AND?: InputMaybe<Array<InputMaybe<LiveEventFilter>>>;
+  OR?: InputMaybe<Array<InputMaybe<LiveEventFilter>>>;
   contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
   date?: InputMaybe<Scalars['DateTime']['input']>;
   date_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -614,13 +562,6 @@ export type LiveEventsFilter = {
   date_lte?: InputMaybe<Scalars['DateTime']['input']>;
   date_not?: InputMaybe<Scalars['DateTime']['input']>;
   date_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']['input']>>>;
-  eventType?: InputMaybe<Scalars['String']['input']>;
-  eventType_contains?: InputMaybe<Scalars['String']['input']>;
-  eventType_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  eventType_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  eventType_not?: InputMaybe<Scalars['String']['input']>;
-  eventType_not_contains?: InputMaybe<Scalars['String']['input']>;
-  eventType_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   location?: InputMaybe<Scalars['String']['input']>;
   location_contains?: InputMaybe<Scalars['String']['input']>;
   location_exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -643,28 +584,31 @@ export type LiveEventsFilter = {
   ticketNotiz_not?: InputMaybe<Scalars['String']['input']>;
   ticketNotiz_not_contains?: InputMaybe<Scalars['String']['input']>;
   ticketNotiz_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  venue?: InputMaybe<Scalars['String']['input']>;
+  venue_contains?: InputMaybe<Scalars['String']['input']>;
+  venue_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  venue_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  venue_not?: InputMaybe<Scalars['String']['input']>;
+  venue_not_contains?: InputMaybe<Scalars['String']['input']>;
+  venue_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-export type LiveEventsLinkingCollections = {
-  __typename?: 'LiveEventsLinkingCollections';
+export type LiveEventLinkingCollections = {
+  __typename?: 'LiveEventLinkingCollections';
   entryCollection?: Maybe<EntryCollection>;
 };
 
 
-export type LiveEventsLinkingCollectionsEntryCollectionArgs = {
+export type LiveEventLinkingCollectionsEntryCollectionArgs = {
   limit?: InputMaybe<Scalars['Int']['input']>;
   locale?: InputMaybe<Scalars['String']['input']>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   skip?: InputMaybe<Scalars['Int']['input']>;
 };
 
-export enum LiveEventsOrder {
-  ConstellationAsc = 'constellation_ASC',
-  ConstellationDesc = 'constellation_DESC',
+export enum LiveEventOrder {
   DateAsc = 'date_ASC',
   DateDesc = 'date_DESC',
-  EventTypeAsc = 'eventType_ASC',
-  EventTypeDesc = 'eventType_DESC',
   LocationAsc = 'location_ASC',
   LocationDesc = 'location_DESC',
   SysFirstPublishedAtAsc = 'sys_firstPublishedAt_ASC',
@@ -678,10 +622,12 @@ export enum LiveEventsOrder {
   TicketLinkAsc = 'ticketLink_ASC',
   TicketLinkDesc = 'ticketLink_DESC',
   TicketNotizAsc = 'ticketNotiz_ASC',
-  TicketNotizDesc = 'ticketNotiz_DESC'
+  TicketNotizDesc = 'ticketNotiz_DESC',
+  VenueAsc = 'venue_ASC',
+  VenueDesc = 'venue_DESC'
 }
 
-/** Music Collection type für Album, Singles etc. [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/music) */
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/music) */
 export type Music = Entry & _Node & {
   __typename?: 'Music';
   _id: Scalars['ID']['output'];
@@ -694,55 +640,48 @@ export type Music = Entry & _Node & {
   musicTitle?: Maybe<Scalars['String']['output']>;
   releaseDate?: Maybe<Scalars['DateTime']['output']>;
   sys: Sys;
-  url?: Maybe<Scalars['String']['output']>;
 };
 
 
-/** Music Collection type für Album, Singles etc. [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/music) */
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/music) */
 export type MusicAlbumCollectionArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
 
-/** Music Collection type für Album, Singles etc. [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/music) */
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/music) */
 export type MusicDescriptionArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
 
-/** Music Collection type für Album, Singles etc. [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/music) */
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/music) */
 export type MusicDistributorUrLsArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
 
-/** Music Collection type für Album, Singles etc. [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/music) */
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/music) */
 export type MusicLinkedFromArgs = {
   allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 
-/** Music Collection type für Album, Singles etc. [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/music) */
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/music) */
 export type MusicMusicCoverArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 
-/** Music Collection type für Album, Singles etc. [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/music) */
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/music) */
 export type MusicMusicTitleArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
 
-/** Music Collection type für Album, Singles etc. [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/music) */
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/music) */
 export type MusicReleaseDateArgs = {
-  locale?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-/** Music Collection type für Album, Singles etc. [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/music) */
-export type MusicUrlArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -794,13 +733,6 @@ export type MusicFilter = {
   releaseDate_not?: InputMaybe<Scalars['DateTime']['input']>;
   releaseDate_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']['input']>>>;
   sys?: InputMaybe<SysFilter>;
-  url?: InputMaybe<Scalars['String']['input']>;
-  url_contains?: InputMaybe<Scalars['String']['input']>;
-  url_exists?: InputMaybe<Scalars['Boolean']['input']>;
-  url_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-  url_not?: InputMaybe<Scalars['String']['input']>;
-  url_not_contains?: InputMaybe<Scalars['String']['input']>;
-  url_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 export type MusicLinkingCollections = {
@@ -830,9 +762,7 @@ export enum MusicOrder {
   SysPublishedAtAsc = 'sys_publishedAt_ASC',
   SysPublishedAtDesc = 'sys_publishedAt_DESC',
   SysPublishedVersionAsc = 'sys_publishedVersion_ASC',
-  SysPublishedVersionDesc = 'sys_publishedVersion_DESC',
-  UrlAsc = 'url_ASC',
-  UrlDesc = 'url_DESC'
+  SysPublishedVersionDesc = 'sys_publishedVersion_DESC'
 }
 
 export type Query = {
@@ -844,8 +774,8 @@ export type Query = {
   entryCollection?: Maybe<EntryCollection>;
   generalContent?: Maybe<GeneralContent>;
   generalContentCollection?: Maybe<GeneralContentCollection>;
-  liveEvents?: Maybe<LiveEvents>;
-  liveEventsCollection?: Maybe<LiveEventsCollection>;
+  liveEvent?: Maybe<LiveEvent>;
+  liveEventCollection?: Maybe<LiveEventCollection>;
   music?: Maybe<Music>;
   musicCollection?: Maybe<MusicCollection>;
   video?: Maybe<Video>;
@@ -911,20 +841,20 @@ export type QueryGeneralContentCollectionArgs = {
 };
 
 
-export type QueryLiveEventsArgs = {
+export type QueryLiveEventArgs = {
   id: Scalars['String']['input'];
   locale?: InputMaybe<Scalars['String']['input']>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
 
-export type QueryLiveEventsCollectionArgs = {
+export type QueryLiveEventCollectionArgs = {
   limit?: InputMaybe<Scalars['Int']['input']>;
   locale?: InputMaybe<Scalars['String']['input']>;
-  order?: InputMaybe<Array<InputMaybe<LiveEventsOrder>>>;
+  order?: InputMaybe<Array<InputMaybe<LiveEventOrder>>>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
   skip?: InputMaybe<Scalars['Int']['input']>;
-  where?: InputMaybe<LiveEventsFilter>;
+  where?: InputMaybe<LiveEventFilter>;
 };
 
 
@@ -1019,7 +949,7 @@ export type TaxonomyConcept = {
   id?: Maybe<Scalars['String']['output']>;
 };
 
-/** Video Collection Type für Music Videos [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/video) */
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/video) */
 export type Video = Entry & _Node & {
   __typename?: 'Video';
   _id: Scalars['ID']['output'];
@@ -1031,19 +961,19 @@ export type Video = Entry & _Node & {
 };
 
 
-/** Video Collection Type für Music Videos [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/video) */
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/video) */
 export type VideoLinkedFromArgs = {
   allowedLocales?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 
-/** Video Collection Type für Music Videos [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/video) */
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/video) */
 export type VideoTitleArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
 
 
-/** Video Collection Type für Music Videos [See type definition](https://app.contentful.com/spaces/pfus6eibra5d/content_types/video) */
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/video) */
 export type VideoVideoLinkArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
 };
