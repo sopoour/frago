@@ -1,5 +1,5 @@
 import { ISOToDate } from '@app/utils/formatDate';
-import { Button, Grid, Text } from '@mantine/core';
+import { Button, Flex, Text } from '@mantine/core';
 import { FC } from 'react';
 import styles from '../Live.module.scss';
 import { Maybe } from '@app/services/graphql/types';
@@ -16,28 +16,37 @@ type Props = {
 
 const LiveRow: FC<Props> = ({ date, location, venue, ticketLink, ticketNotiz }) => {
   const gridComponent = (isLinked: boolean) => (
-    <Grid
-      gutter={{ base: 's', xs: 'lg' }}
-      columns={3}
-      className={isLinked ? `${styles.liveRowLinked} ${styles.liveRow}` : styles.liveRow}
+    <Flex
+      direction={{ base: 'column', sm: 'row' }}
+      gap="20px"
+      justify={'space-between'}
+      className={styles.liveRow}
     >
-      <Grid.Col span={1}>
-        <Text fw={600} c={'primary.9'} size="md">
+      <Flex direction={'column'} gap={{ base: '8px', sm: '20px' }}>
+        <Flex gap={'8px'} align={'center'} className={styles.location}>
+          <Text c={'primary.9'} size="40px" tt={'uppercase'} fw={600} ff={'Oswald'}>
+            {location},
+          </Text>
+          <Text c={'primary.7'} size="28px">
+            {venue}
+          </Text>
+        </Flex>
+
+        <Text fw={600} c={'primary.9'} size="24px" style={{ letterSpacing: '-0.1rem' }}>
           {date && ISOToDate(date)}
         </Text>
-      </Grid.Col>
-      <Grid.Col span={1}>
-        <Text c={'primary.9'} size="md">
-          {venue},
-        </Text>
-        <Text c={'primary.9'} size="md">
-          {location}
-        </Text>
-      </Grid.Col>
-      <Grid.Col span={1} className={styles.liveRowCol}>
+      </Flex>
+
+      <Flex>
         {(ticketLink || ticketNotiz) &&
           (ticketLink ? (
-            <Button variant="outline" pb={'xs'} pt={'xs'} component="span">
+            <Button
+              variant="filled"
+              style={{ padding: '4px 48px' }}
+              component="span"
+              size={'md'}
+              radius={'xl'}
+            >
               {date && new Date(date).getDate() >= new Date().getDate() ? 'Ticket' : 'Impressions'}
             </Button>
           ) : (
@@ -45,8 +54,8 @@ const LiveRow: FC<Props> = ({ date, location, venue, ticketLink, ticketNotiz }) 
               {ticketNotiz}
             </Text>
           ))}
-      </Grid.Col>
-    </Grid>
+      </Flex>
+    </Flex>
   );
 
   return (

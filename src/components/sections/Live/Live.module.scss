@@ -1,41 +1,34 @@
 @use '../../../styles/variables.module.scss' as *;
 
 .liveRow {
-    padding: 12px 4px;
-    border-top: 1px solid var(--mantine-color-primary-7);
+    padding: 20px 24px;
     width: 100%;
 }
 
-.liveRowLinked {
-    &:hover {
-        background: rgba(202, 204, 232, 30%);
+.location {
+    >p:first-child {
+        font-size: 60px;
+
+        @media only screen and (max-width: $mantine-breakpoint-xs) {
+            font-size: 40px;
+        }
     }
-}
 
-.liveRowCol {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    >p:last-child {
+        font-size: 28px;
 
-.liveGridPastShows {
-    margin-top: 36px;
-
-    @media (max-width: $mantine-breakpoint-sm) {
-        margin-top: 0;
-
-        [id^="showTitle"] {
-            margin-top: 32px
+        @media only screen and (max-width: $mantine-breakpoint-xs) {
+            font-size: 20px;
         }
     }
 }
 
+.pastShowTitle {
+    margin-top: 28px;
+}
+
 .liveGridSection {
     position: relative;
-
-    >.liveRow:last-child {
-        border-bottom: 1px solid var(--mantine-color-primary-7);
-    }
 }
 
 .showMore {
@@ -50,7 +43,7 @@
         left: 0;
         width: 100%;
         height: 120px;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--mantine-color-grey-0) 100%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--mantine-color-grey-2) 100%);
         transition: opacity 0.3s ease;
     }
 }
