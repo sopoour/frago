@@ -32,7 +32,11 @@ const Live: FC = () => {
     <BackgroundSection id="live" background="var(--mantine-color-grey-2)">
       <MaxwidthContainer id="live" size="lg">
         <VisuallyHidden component={'h2'}>Live Shows</VisuallyHidden>
-        <Flex direction={'column'} style={{ width: '100%' }} gap="40px">
+        <Flex
+          direction={'column'}
+          style={{ width: '100%', padding: '32px 0' }}
+          gap={{ base: '24px', sm: '40px' }}
+        >
           {upcomingShows && upcomingShows?.length > 0 && (
             <LiveSection title="Upcoming shows" shows={upcomingShows} shownEventsNumber={3} />
           )}

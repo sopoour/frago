@@ -1,5 +1,12 @@
 @use '../../styles/variables.module.scss' as *;
 
+@mixin transition {
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+
 .navLink {
     font-weight: 600;
     color: var(--mantine-color-primary-9);
@@ -25,7 +32,7 @@
 .navbarBg {
     padding: 12px 0;
     background-color: transparent;
-    transition: all 0.3s ease, color 0.3s ease;
+    @include transition;
 
     path {
         fill: var(--mantine-color-primary-9);
@@ -35,7 +42,16 @@
 .navbarScrolled {
     background: rgba(34, 34, 34, 0.15);
     backdrop-filter: blur(8px);
-    transition: all 0.3s ease;
+    @include transition;
+
+    .navGroup {
+        gap: 8px;
+
+    }
+
+    .logo {
+        scale: 1.0;
+    }
 
     .navLink {
         color: var(--mantine-color-primary-9);
@@ -71,13 +87,21 @@
     }
 }
 
+.navGroup {
+    gap: 20px;
+    @include transition;
+}
+
 .logo {
-    max-height: 30px;
+    max-height: 35px;
     cursor: pointer;
     width: max-content;
+    scale: 2;
+    @include transition;
 
     @media only screen and (max-width: $mantine-breakpoint-sm) {
-        max-height: 25px;
+        max-height: 35px;
+        scale: 1.0;
     }
 }
 

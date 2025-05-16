@@ -2,7 +2,7 @@ import React, { FC, ReactNode, useEffect, useState } from 'react';
 import styles from './Layout.module.scss';
 import Logo from '@app/assets/logo.png';
 import { Anchor, AppShell, Burger, Flex, Group, Image, SimpleGrid, Text } from '@mantine/core';
-import { useDisclosure, useIntersection, useMediaQuery } from '@mantine/hooks';
+import { useDisclosure, useIntersection } from '@mantine/hooks';
 import LinkContainer from '../LinkContainer/LinkContainer';
 import Hero from '../sections/Hero/Hero';
 import { animateScroll, Link } from 'react-scroll';
@@ -23,13 +23,12 @@ type Props = {
 
 const Layout: FC<Props> = ({ children }) => {
   const [opened, { toggle, close }] = useDisclosure();
-  const isMobile = useMediaQuery(`(max-width: 48em)`);
   const currentYear = new Date().getFullYear();
   const router = useRouter();
   const [scrolled, setScrolled] = useState<Boolean>(false);
   const { ref, entry } = useIntersection({
     root: null,
-    threshold: 0.1,
+    threshold: 0.15,
   });
   const navbarClass = scrolled ? `${styles.navbarBg} ${styles.navbarScrolled}` : styles.navbarBg;
 
@@ -46,7 +45,7 @@ const Layout: FC<Props> = ({ children }) => {
         className={styles.navLink}
         spy
         smooth
-        offset={isMobile ? -50 : 0}
+        offset={item.label === 'Live' ? -100 : -50}
         duration={700}
         onClick={close}
       >
@@ -78,12 +77,12 @@ const Layout: FC<Props> = ({ children }) => {
         <Group h="100%" px="xl" w="100%">
           <Flex
             align="center"
-            gap={16}
             style={{ flex: 1 }}
-            direction={{ base: 'row', md: 'column' }}
+            direction={{ base: 'row', sm: 'column' }}
             justify={'space-between'}
+            className={styles.navGroup}
           >
-            <Group gap={2} visibleFrom="md">
+            <Group gap={2} visibleFrom="sm">
               {navLinkItems}
             </Group>
             <Image
@@ -95,13 +94,13 @@ const Layout: FC<Props> = ({ children }) => {
               }}
               className={styles.logo}
             />
-            <Group visibleFrom="md">
+            <Group visibleFrom="sm">
               <LinkContainer size="small" />
             </Group>
             <Burger
               opened={opened}
               onClick={toggle}
-              hiddenFrom="md"
+              hiddenFrom="sm"
               size="sm"
               color="primary.9"
               aria-label="Toggle navigation menu"
@@ -117,8 +116,8 @@ const Layout: FC<Props> = ({ children }) => {
             height: '45px',
             width: '52%',
             cursor: 'pointer',
-            paddingLeft: '30px',
-            paddingTop: '6px',
+            paddingLeft: '25px',
+            paddingTop: '4px',
           }}
           onClick={() => animateScroll.scrollTo(0, { smooth: true, duration: 800 })}
         />

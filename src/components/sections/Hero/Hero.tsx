@@ -45,7 +45,7 @@ const Hero = forwardRef<HTMLDivElement>((props, ref) => {
 
       <button
         className={styles.arrowButtonContainer}
-        onClick={() => scroller.scrollTo('live', { smooth: true, duration: 800 })}
+        onClick={() => scroller.scrollTo('live', { smooth: true, duration: 800, offset: -100 })}
         title="Scroll down to see live"
       >
         <IoIosArrowDown />
