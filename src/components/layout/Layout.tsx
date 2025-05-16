@@ -28,7 +28,7 @@ const Layout: FC<Props> = ({ children }) => {
   const [scrolled, setScrolled] = useState<Boolean>(false);
   const { ref, entry } = useIntersection({
     root: null,
-    threshold: 0.15,
+    threshold: 0.2,
   });
   const navbarClass = scrolled ? `${styles.navbarBg} ${styles.navbarScrolled}` : styles.navbarBg;
 

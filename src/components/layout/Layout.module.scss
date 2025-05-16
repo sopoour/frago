@@ -88,15 +88,15 @@
 }
 
 .navGroup {
-    gap: 20px;
+    gap: 28px;
     @include transition;
 }
 
 .logo {
-    max-height: 35px;
+    max-height: 45px;
     cursor: pointer;
     width: max-content;
-    scale: 2;
+    scale: 2.2;
     @include transition;
 
     @media only screen and (max-width: $mantine-breakpoint-sm) {
