@@ -13,7 +13,7 @@ const About: FC = () => {
   const { data, isLoading } = useSWR<GeneralContent | null>('/api/generalContent', fetcher);
 
   return (
-    <BackgroundSection id="about" background="var(--mantine-color-grey-5)">
+    <BackgroundSection id="about" background="var(--mantine-color-grey-3)">
       <MaxwidthContainer id="about">
         <VisuallyHidden component={'h2'}>About</VisuallyHidden>
         <SimpleGrid

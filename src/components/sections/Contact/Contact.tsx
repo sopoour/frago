@@ -59,7 +59,7 @@ const Contact: FC = () => {
   };
 
   return (
-    <BackgroundSection id="contact" background="var(--mantine-color-grey-4)">
+    <BackgroundSection id="contact" background="var(--mantine-color-grey-3)">
       <MaxwidthContainer id="contact" className={styles.contactSection}>
         <VisuallyHidden component={'h2'}>Contact</VisuallyHidden>
         <form onSubmit={form.onSubmit(handleSubmit)} className={styles.contactContainer}>
