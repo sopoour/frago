@@ -59,10 +59,7 @@ const Contact: FC = () => {
   };
 
   return (
-    <BackgroundSection
-      id="contact"
-      background="linear-gradient(180deg, var(--mantine-color-grey-0) 0%, var(--mantine-color-grey-4) 100%)"
-    >
+    <BackgroundSection id="contact" background="var(--mantine-color-grey-4)">
       <MaxwidthContainer id="contact" className={styles.contactSection}>
         <VisuallyHidden component={'h2'}>Contact</VisuallyHidden>
         <form onSubmit={form.onSubmit(handleSubmit)} className={styles.contactContainer}>
