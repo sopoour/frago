@@ -23,6 +23,7 @@
 }
 
 .navbarBg {
+    padding: 12px 0;
     background-color: transparent;
     transition: all 0.3s ease, color 0.3s ease;
 
@@ -32,7 +33,7 @@
 }
 
 .navbarScrolled {
-    background: rgba(83, 83, 86, 0.1);
+    background: rgba(34, 34, 34, 0.15);
     backdrop-filter: blur(8px);
     transition: all 0.3s ease;
 
@@ -70,6 +71,16 @@
     }
 }
 
+.logo {
+    max-height: 30px;
+    cursor: pointer;
+    width: max-content;
+
+    @media only screen and (max-width: $mantine-breakpoint-sm) {
+        max-height: 25px;
+    }
+}
+
 .footerLink {
     color: var(--mantine-color-grey-0);
     font-weight: 600;
@@ -77,19 +88,5 @@
     &:hover {
         text-decoration: underline !important;
         color: var(--mantine-color-grey-2) !important;
-    }
-}
-
-.supportLogos {
-    max-width: 35%;
-
-    @media only screen and (max-width: $mantine-breakpoint-sm) {
-        max-width: unset;
-
-        width: 100%;
-
-        p {
-            text-align: center;
-        }
     }
 }

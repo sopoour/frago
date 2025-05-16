@@ -67,7 +67,7 @@ const Layout: FC<Props> = ({ children }) => {
 
   return (
     <AppShell
-      header={{ height: 64 }}
+      header={{ height: 'max-content' }}
       bg={'grey.0'}
       padding="md"
       styles={{
@@ -76,21 +76,27 @@ const Layout: FC<Props> = ({ children }) => {
     >
       <AppShell.Header className={navbarClass}>
         <Group h="100%" px="xl" w="100%">
-          <Group justify="space-between" style={{ flex: 1 }}>
+          <Flex
+            align="center"
+            gap={16}
+            style={{ flex: 1 }}
+            direction={{ base: 'row', md: 'column' }}
+            justify={'space-between'}
+          >
             <Group gap={2} visibleFrom="md">
               {navLinkItems}
             </Group>
             <Image
               src={Logo.src}
               alt="FRAGO Logo"
-              style={{ maxHeight: '25px', cursor: 'pointer' }}
               onClick={() => {
                 animateScroll.scrollTo(0, { smooth: true, duration: 800 });
                 router.pathname !== '/' && router.push('/');
               }}
+              className={styles.logo}
             />
             <Group visibleFrom="md">
-              <LinkContainer />
+              <LinkContainer size="small" />
             </Group>
             <Burger
               opened={opened}
@@ -100,7 +106,7 @@ const Layout: FC<Props> = ({ children }) => {
               color="primary.9"
               aria-label="Toggle navigation menu"
             />
-          </Group>
+          </Flex>
         </Group>
       </AppShell.Header>
       <Sidebar open={opened} close={close} className={navbarClass}>
@@ -112,7 +118,7 @@ const Layout: FC<Props> = ({ children }) => {
             width: '52%',
             cursor: 'pointer',
             paddingLeft: '30px',
-            paddingTop: '10px',
+            paddingTop: '6px',
           }}
           onClick={() => animateScroll.scrollTo(0, { smooth: true, duration: 800 })}
         />
