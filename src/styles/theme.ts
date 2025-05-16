@@ -1,7 +1,7 @@
 import { createTheme } from '@mantine/core';
 
 const theme = createTheme({
-  fontFamily: '"Lato", sans-serif',
+  fontFamily: '"Open Sans", sans-serif',
     primaryColor: "primary",
     colors: {
       'primary': [

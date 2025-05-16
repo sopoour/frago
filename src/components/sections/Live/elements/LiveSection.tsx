@@ -1,5 +1,5 @@
 import { LiveEvent } from '@app/services/graphql/types';
-import { Button, Grid, Text } from '@mantine/core';
+import { Button, Flex, Text } from '@mantine/core';
 import { FC, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 import LiveRow from './LiveRow';
@@ -12,32 +12,24 @@ type Props = {
   pastShows?: boolean;
 };
 
-const LiveSection: FC<Props> = ({ title, shows, shownEventsNumber = 3, pastShows = false }) => {
+const LiveSection: FC<Props> = ({ title, shows, shownEventsNumber = 2, pastShows = false }) => {
   const [showAll, setShowAll] = useState<boolean>(false);
   const visibleShows = showAll ? shows : shows?.slice(0, shownEventsNumber);
 
   return (
     <>
-      <Grid.Col
-        span={{ base: 12, sm: 4 }}
-        className={
-          pastShows
-            ? `${styles.liveGridPastShows} ${styles.liveGridSection}`
-            : styles.liveGridSection
-        }
+      <Text
+        size="20px"
+        fw={600}
+        ff="Oswald"
+        c={'primary.9'}
+        id="showTitle"
+        component="h3"
+        className={pastShows ? styles.pastShowTitle : ''}
       >
-        <Text size="20px" fw={600} ff="Oswald" c={'primary.9'} id="showTitle" component="h3">
-          {title}
-        </Text>
-      </Grid.Col>
-      <Grid.Col
-        span={{ base: 12, sm: 8 }}
-        className={
-          pastShows
-            ? `${styles.liveGridPastShows} ${styles.liveGridSection}`
-            : styles.liveGridSection
-        }
-      >
+        {title}
+      </Text>
+      <Flex direction={'column'} className={styles.liveGridSection}>
         {visibleShows?.map((live) => (
           <LiveRow
             key={live.date}
@@ -64,7 +56,7 @@ const LiveSection: FC<Props> = ({ title, shows, shownEventsNumber = 3, pastShows
             </Button>
           </div>
         )}
-      </Grid.Col>
+      </Flex>
     </>
   );
 };
