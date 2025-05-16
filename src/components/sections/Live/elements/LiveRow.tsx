@@ -42,9 +42,9 @@ const LiveRow: FC<Props> = ({ date, location, venue, ticketLink, ticketNotiz }) 
           (ticketLink ? (
             <Button
               variant="filled"
-              style={{ padding: '4px 48px' }}
+              style={{ padding: '4px 56px' }}
               component="span"
-              size={'md'}
+              size={'lg'}
               radius={'xl'}
               className={styles.ticketButton}
             >
