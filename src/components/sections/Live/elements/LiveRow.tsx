@@ -46,6 +46,7 @@ const LiveRow: FC<Props> = ({ date, location, venue, ticketLink, ticketNotiz }) 
               component="span"
               size={'md'}
               radius={'xl'}
+              className={styles.ticketButton}
             >
               {date && new Date(date).getDate() >= new Date().getDate() ? 'Ticket' : 'Impressions'}
             </Button>

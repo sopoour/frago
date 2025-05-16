@@ -1,5 +1,36 @@
 @use '../../../styles/variables.module.scss' as *;
 
+.pastShowTitle {
+    margin-top: 28px;
+
+    @media only screen and (max-width: $mantine-breakpoint-xs) {
+        margin-top: 16px;
+    }
+}
+
+.liveGridSection {
+    position: relative;
+}
+
+.showMore {
+    display: flex;
+    justify-content: center;
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        bottom: 50px;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--mantine-color-grey-2) 100%);
+        transition: opacity 0.3s ease;
+    }
+}
+
+// LIVEROW
+
 .liveRow {
     padding: 20px 24px;
     width: 100%;
@@ -27,31 +58,11 @@
     }
 }
 
-.pastShowTitle {
-    margin-top: 28px;
-
-    @media only screen and (max-width: $mantine-breakpoint-xs) {
-        margin-top: 16px;
-    }
-}
-
-.liveGridSection {
-    position: relative;
-}
-
-.showMore {
-    display: flex;
-    justify-content: center;
-
-    &::after {
-        content: '';
-        position: absolute;
-        display: block;
-        bottom: 50px;
-        left: 0;
-        width: 100%;
-        height: 120px;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--mantine-color-grey-2) 100%);
-        transition: opacity 0.3s ease;
+.ticketButton {
+    @media only screen and (max-width: $mantine-breakpoint-sm) {
+        --button-height: var(--button-height-sm) !important;
+        --button-padding-x: var(--button-padding-x-sm) !important;
+        --button-fz: var(--mantine-font-size-sm) !important;
+        padding: 4px 32px;
     }
 }
