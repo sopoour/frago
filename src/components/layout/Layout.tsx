@@ -1,8 +1,8 @@
 import React, { FC, ReactNode, useEffect, useState } from 'react';
 import styles from './Layout.module.scss';
 import Logo from '@app/assets/logo.png';
-import { Anchor, AppShell, Burger, Flex, Group, Image, SimpleGrid, Text } from '@mantine/core';
-import { useDisclosure, useIntersection } from '@mantine/hooks';
+import { Anchor, AppShell, Burger, Flex, Group, Image, Text } from '@mantine/core';
+import { useDisclosure, useIntersection, useMediaQuery } from '@mantine/hooks';
 import LinkContainer from '../LinkContainer/LinkContainer';
 import Hero from '../sections/Hero/Hero';
 import { animateScroll, Link } from 'react-scroll';
@@ -24,6 +24,7 @@ type Props = {
 const Layout: FC<Props> = ({ children }) => {
   const [opened, { toggle, close }] = useDisclosure();
   const currentYear = new Date().getFullYear();
+  const isMobile = useMediaQuery(`(max-width: 48em)`);
   const router = useRouter();
   const [scrolled, setScrolled] = useState<Boolean>(false);
   const { ref, entry } = useIntersection({
@@ -45,7 +46,7 @@ const Layout: FC<Props> = ({ children }) => {
         className={styles.navLink}
         spy
         smooth
-        offset={item.label === 'Live' ? -100 : -50}
+        offset={item.label === 'Live' && !isMobile ? -100 : -50}
         duration={700}
         onClick={close}
       >
@@ -66,7 +67,7 @@ const Layout: FC<Props> = ({ children }) => {
 
   return (
     <AppShell
-      header={{ height: 'max-content' }}
+      header={{ height: isMobile ? '64px' : 'max-content' }}
       bg={'grey.0'}
       padding="md"
       styles={{

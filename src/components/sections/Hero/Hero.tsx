@@ -8,6 +8,7 @@ import { scroller } from 'react-scroll';
 import ContentfulImage from '@app/lib/contentful-image';
 import { VisuallyHidden } from '@mantine/core';
 import HeroImage from '@app/assets/Titelbild.png';
+import { useMediaQuery } from '@mantine/hooks';
 
 const Hero = forwardRef<HTMLDivElement>((props, ref) => {
   const { data: generalContentData, isLoading } = useSWR<GeneralContent | null>(
@@ -16,11 +17,7 @@ const Hero = forwardRef<HTMLDivElement>((props, ref) => {
     {},
   );
 
-  const scrollToNextSection = () => {
-    const current = document.activeElement;
-    const next = current?.closest('section')?.nextElementSibling;
-    next?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const isMobile = useMediaQuery(`(max-width: 48em)`);
 
   return (
     <div
@@ -45,7 +42,9 @@ const Hero = forwardRef<HTMLDivElement>((props, ref) => {
 
       <button
         className={styles.arrowButtonContainer}
-        onClick={() => scroller.scrollTo('live', { smooth: true, duration: 800, offset: -100 })}
+        onClick={() =>
+          scroller.scrollTo('live', { smooth: true, duration: 800, offset: isMobile ? 0 : -100 })
+        }
         title="Scroll down to see live"
       >
         <IoIosArrowDown />
