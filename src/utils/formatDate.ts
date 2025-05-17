@@ -32,7 +32,7 @@ export const dateToLocalDateType = (date: Date) => {
 export const ISOToDate = (isoString: string) => {
   return new Intl.DateTimeFormat('de-DE', {
     day: '2-digit',
-    month: '2-digit',
+    month: 'long',
     year: 'numeric'
   }).format(new Date(isoString));
 }

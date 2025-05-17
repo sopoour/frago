@@ -58,11 +58,21 @@
     }
 }
 
+.date {
+    font-size: 24px;
+
+    @media only screen and (max-width: $mantine-breakpoint-xs) {
+        font-size: 20px;
+    }
+}
+
 .ticketButton {
-    @media only screen and (max-width: $mantine-breakpoint-sm) {
+    padding: 4px 56px;
+
+    @media only screen and (max-width: $mantine-breakpoint-xs) {
         --button-height: var(--button-height-sm) !important;
         --button-padding-x: var(--button-padding-x-sm) !important;
         --button-fz: var(--mantine-font-size-sm) !important;
-        padding: 4px 32px;
+        padding: 4px 48px;
     }
 }

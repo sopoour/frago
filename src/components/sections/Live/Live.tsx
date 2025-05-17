@@ -30,7 +30,7 @@ const Live: FC = () => {
 
   return (
     <BackgroundSection id="live" background="var(--mantine-color-grey-2)">
-      <MaxwidthContainer id="live" size="lg">
+      <MaxwidthContainer id="live" size="md">
         <VisuallyHidden component={'h2'}>Live Shows</VisuallyHidden>
         <Flex
           direction={'column'}

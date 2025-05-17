@@ -18,21 +18,21 @@ const LiveRow: FC<Props> = ({ date, location, venue, ticketLink, ticketNotiz }) 
   const gridComponent = (isLinked: boolean) => (
     <Flex
       direction={{ base: 'column', sm: 'row' }}
-      gap="20px"
+      gap="16px"
       justify={'space-between'}
       className={styles.liveRow}
     >
-      <Flex direction={'column'} gap={{ base: '8px', sm: '20px' }}>
-        <Flex gap={'8px'} align={'center'} className={styles.location}>
+      <Flex direction={'column'} gap={{ base: '0', xs: '20px' }}>
+        <Flex gap={'16px'} align={'center'} className={styles.location}>
           <Text c={'primary.9'} size="40px" tt={'uppercase'} fw={600} ff={'Oswald'}>
-            {location},
+            {location}
           </Text>
           <Text c={'primary.7'} size="28px">
             {venue}
           </Text>
         </Flex>
 
-        <Text fw={600} c={'primary.9'} size="24px" style={{ letterSpacing: '-0.1rem' }}>
+        <Text fw={600} c={'primary.9'} style={{ letterSpacing: '-0.1rem' }} className={styles.date}>
           {date && ISOToDate(date)}
         </Text>
       </Flex>
@@ -42,7 +42,6 @@ const LiveRow: FC<Props> = ({ date, location, venue, ticketLink, ticketNotiz }) 
           (ticketLink ? (
             <Button
               variant="filled"
-              style={{ padding: '4px 56px' }}
               component="span"
               size={'lg'}
               radius={'xl'}
