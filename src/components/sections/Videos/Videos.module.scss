@@ -5,13 +5,19 @@
     gap: 28px;
 
     @media only screen and (max-width: $mantine-breakpoint-sm) {
-
         gap: 36px
     }
 
-    >*:only-child {
+}
+
+.hasOneVideo {
+    .videoContainer {
         width: 100%;
-        height: 60%;
+        height: 500px;
+
+        h3 {
+            font-size: 32px !important;
+        }
 
         .video {
             width: 100%;
@@ -19,6 +25,7 @@
             min-width: 0 !important;
         }
     }
+
 }
 
 .video {

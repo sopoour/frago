@@ -1,6 +1,6 @@
 import { fetcher } from '@app/hooks/fetch/useFetch';
 import { Video } from '@app/services/graphql/types';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import useSWR from 'swr';
 import styles from './Videos.module.scss';
 import { Flex, Text, VisuallyHidden } from '@mantine/core';
@@ -9,10 +9,27 @@ import MaxwidthContainer from '@app/components/MaxwidthContainer/MaxwidthContain
 const Videos: FC = () => {
   const { data, isLoading } = useSWR<Video[] | null>('/api/video', fetcher);
 
+  useEffect(() => {
+    if (data) {
+      const section = document.getElementById('videos');
+      if (section) {
+        const containers = section.getElementsByClassName('Videos_videoContainer__BD4kk');
+        console.log(containers);
+        if (containers.length === 1) {
+          section.classList.add('hasOneVideo');
+        }
+      }
+    }
+  }, [data]);
+
   if (data && data?.length === 0) return null;
 
   return (
-    <MaxwidthContainer id="videos" className={styles.videoSection} component={'section'}>
+    <MaxwidthContainer
+      id="videos"
+      className={`${styles.videoSection} ${styles.hasOneVideo}`}
+      component={'section'}
+    >
       <VisuallyHidden component={'h2'}>Videos</VisuallyHidden>
       {data?.map((video) => (
         <Flex
@@ -21,7 +38,7 @@ const Videos: FC = () => {
           gap={{ base: 20, sm: 32 }}
           className={styles.videoContainer}
         >
-          <Text c={'primary.9'} size="20px" fw={600} ff="Oswald" component="h3">
+          <Text c={'primary.9'} size="24px" fw={600} ff="Oswald" component="h3">
             {video.title}
           </Text>
           <iframe
