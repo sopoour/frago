@@ -5,11 +5,11 @@
     flex-direction: column;
     gap: 20px;
     padding: 32px;
-    background: var(--mantine-color-grey-1);
+    background: var(--mantine-color-grey-8);
 
     label {
         margin-bottom: 8px;
-        color: var(--mantine-color-primary-9)
+        color: white;
     }
 
     @media only screen and (max-width: $mantine-breakpoint-sm) {
@@ -29,6 +29,18 @@
 .contactLinkContainer {
     gap: 16px !important;
     margin-top: 32px;
+
+    svg {
+        path {
+            fill: white;
+        }
+
+        &:hover {
+            path {
+                fill: var(--mantine-color-primary-9);
+            }
+        }
+    }
 
     @media only screen and (max-width: $mantine-breakpoint-sm) {
         margin-top: 16px;

@@ -27,12 +27,12 @@ const LiveRow: FC<Props> = ({ date, location, venue, ticketLink, ticketNotiz }) 
           <Text c={'primary.9'} size="40px" tt={'uppercase'} fw={600} ff={'Oswald'}>
             {location}
           </Text>
-          <Text c={'primary.7'} size="28px">
+          <Text c={'primary.0'} size="28px">
             {venue}
           </Text>
         </Flex>
 
-        <Text fw={600} c={'primary.9'} style={{ letterSpacing: '-0.1rem' }} className={styles.date}>
+        <Text fw={600} c={'white'} style={{ letterSpacing: '-0.1rem' }} className={styles.date}>
           {date && ISOToDate(date)}
         </Text>
       </Flex>

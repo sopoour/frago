@@ -35,10 +35,10 @@ const Videos: FC = () => {
         <Flex
           key={video.title}
           direction={'column'}
-          gap={{ base: 20, sm: 32 }}
+          gap={{ base: 38, sm: 68 }}
           className={styles.videoContainer}
         >
-          <Text c={'primary.9'} size="24px" fw={600} ff="Oswald" component="h3">
+          <Text c={'white'} size="24px" fw={600} ff="Oswald" component="h3">
             {video.title}
           </Text>
           <iframe

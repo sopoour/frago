@@ -29,7 +29,7 @@ const Live: FC = () => {
   if (data && data?.length === 0) return null;
 
   return (
-    <BackgroundSection id="live" background="var(--mantine-color-grey-2)">
+    <BackgroundSection id="live" background="black">
       <MaxwidthContainer id="live" size="md">
         <VisuallyHidden component={'h2'}>Live Shows</VisuallyHidden>
         <Flex

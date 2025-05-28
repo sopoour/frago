@@ -22,7 +22,7 @@ const LiveSection: FC<Props> = ({ title, shows, shownEventsNumber = 2, pastShows
         size="20px"
         fw={600}
         ff="Oswald"
-        c={'primary.9'}
+        c={'white'}
         id="showTitle"
         component="h3"
         className={pastShows ? styles.pastShowTitle : ''}

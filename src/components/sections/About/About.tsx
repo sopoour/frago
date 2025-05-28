@@ -13,7 +13,7 @@ const About: FC = () => {
   const { data, isLoading } = useSWR<GeneralContent | null>('/api/generalContent', fetcher);
 
   return (
-    <BackgroundSection id="about" background="var(--mantine-color-grey-3)">
+    <BackgroundSection id="about" background="black">
       <MaxwidthContainer id="about">
         <VisuallyHidden component={'h2'}>About</VisuallyHidden>
         <SimpleGrid
@@ -31,7 +31,7 @@ const About: FC = () => {
               style={{ objectFit: 'cover' }}
             />
           </span>
-          <Text c={'primary.9'} size="xl" fw={500} ta="justify">
+          <Text c={'white'} size="xl" fw={500} ta="justify">
             {data?.aboutDescription ||
               'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'}
           </Text>

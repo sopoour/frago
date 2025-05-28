@@ -59,7 +59,7 @@ const Contact: FC = () => {
   };
 
   return (
-    <BackgroundSection id="contact" background="var(--mantine-color-grey-3)">
+    <BackgroundSection id="contact" background="black">
       <MaxwidthContainer id="contact" className={styles.contactSection}>
         <VisuallyHidden component={'h2'}>Contact</VisuallyHidden>
         <form onSubmit={form.onSubmit(handleSubmit)} className={styles.contactContainer}>
@@ -111,7 +111,7 @@ const Contact: FC = () => {
           </Text>
           <EmailCopy email="contact@g-emma.com" label="Email" />
           <EmailCopy email="booking@g-emma.com" label="Booking" />
-          <LinkContainer className={styles.contactLinkContainer} hasToolTip />
+          <LinkContainer className={styles.contactLinkContainer} />
         </Flex>
       </MaxwidthContainer>
     </BackgroundSection>

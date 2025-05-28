@@ -68,7 +68,7 @@ const Layout: FC<Props> = ({ children }) => {
   return (
     <AppShell
       header={{ height: isMobile ? '64px' : 'max-content' }}
-      bg={'grey.0'}
+      bg={'black'}
       padding="md"
       styles={{
         root: { '--app-shell-border-color': 'transparent' },
