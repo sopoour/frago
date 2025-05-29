@@ -1,5 +1,5 @@
 :root[data-mantine-color-scheme='light'] {
-    --mantine-color-body: var(--mantine-color-grey-0) !important;
+    --mantine-color-body: black !important;
 }
 
 html, body {

@@ -42,3 +42,9 @@ export const ISOToYear = (isoString: string) => {
     year: 'numeric'
   })?.format(new Date(isoString));
 }
+
+export const normalizeDate = (dateString: string) => {
+  const date = new Date(dateString);
+  date.setHours(0, 0, 0, 0); // Strip time
+  return date;
+};
