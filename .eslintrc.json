@@ -1,3 +1,10 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "useEslintrc": true,
+  "extensions": [
+    ".js",
+    ".jsx",
+    ".ts",
+    ".tsx"
+  ]
 }
