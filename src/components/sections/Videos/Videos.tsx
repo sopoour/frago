@@ -14,7 +14,6 @@ const Videos: FC = () => {
       const section = document.getElementById('videos');
       if (section) {
         const containers = section.getElementsByClassName('Videos_videoContainer__BD4kk');
-        console.log(containers);
         if (containers.length === 1) {
           section.classList.add('hasOneVideo');
         }
