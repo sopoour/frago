@@ -41,7 +41,7 @@ const Live: FC = () => {
             <LiveSection title="Kommende Shows" shows={upcomingShows} shownEventsNumber={3} />
           )}
           {pastShows && pastShows?.length > 0 && (
-            <LiveSection title="Vergangende Shows" shows={pastShows} pastShows />
+            <LiveSection title="Vergangene Shows" shows={pastShows} pastShows />
           )}
         </Flex>
       </MaxwidthContainer>
