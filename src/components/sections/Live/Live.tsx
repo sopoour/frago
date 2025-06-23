@@ -38,10 +38,10 @@ const Live: FC = () => {
           gap={{ base: '24px', sm: '40px' }}
         >
           {upcomingShows && upcomingShows?.length > 0 && (
-            <LiveSection title="Upcoming shows" shows={upcomingShows} shownEventsNumber={3} />
+            <LiveSection title="Kommende Shows" shows={upcomingShows} shownEventsNumber={3} />
           )}
           {pastShows && pastShows?.length > 0 && (
-            <LiveSection title="Past shows" shows={pastShows} pastShows />
+            <LiveSection title="Vergangende Shows" shows={pastShows} pastShows />
           )}
         </Flex>
       </MaxwidthContainer>
