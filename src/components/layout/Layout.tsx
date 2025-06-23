@@ -11,10 +11,10 @@ import { useRouter } from 'next/router';
 
 const navLinks = [
   { label: 'Live' },
-  { label: 'About' },
+  { label: 'Über uns' },
   /* { label: 'Music' }, */
   { label: 'Videos' },
-  { label: 'Contact' },
+  { label: 'Kontakt' },
 ];
 
 type Props = {
@@ -34,7 +34,7 @@ const Layout: FC<Props> = ({ children }) => {
   const navbarClass = scrolled ? `${styles.navbarBg} ${styles.navbarScrolled}` : styles.navbarBg;
 
   const navLinkItems = navLinks.map((item, index) => {
-    const itemHref = item.label.toLowerCase();
+    const itemHref = item.label.toLowerCase().replace(/\s+/g, '-');
 
     return (
       <Link
