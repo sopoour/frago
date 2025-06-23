@@ -12,10 +12,17 @@ import {
 } from '@mantine/core';
 import styles from './Contact.module.scss';
 import LinkContainer from '@app/components/LinkContainer/LinkContainer';
-import { IconLink } from '@app/types';
 import EmailCopy from '@app/components/EmailCopy/EmailCopy';
 import MaxwidthContainer from '@app/components/MaxwidthContainer/MaxwidthContainer';
 import BackgroundSection from '@app/components/BackgroundSection/BackgroundSection';
+import { IconLink } from '@app/types';
+
+const links: IconLink[] = [
+  { type: 'instagram' },
+  { type: 'spotify' },
+  { type: 'appleMusic' },
+  { type: 'youtube' },
+];
 
 const Contact: FC = () => {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
@@ -59,13 +66,13 @@ const Contact: FC = () => {
   };
 
   return (
-    <BackgroundSection id="contact" background="black">
-      <MaxwidthContainer id="contact" className={styles.contactSection}>
+    <BackgroundSection id="kontakt" background="black">
+      <MaxwidthContainer id="kontakt" className={styles.contactSection}>
         <VisuallyHidden component={'h2'}>Contact</VisuallyHidden>
         <form onSubmit={form.onSubmit(handleSubmit)} className={styles.contactContainer}>
           <TextInput
             label="Name"
-            placeholder="Your name"
+            placeholder="Dein Name"
             {...form.getInputProps('name')}
             withAsterisk
             size="md"
@@ -73,7 +80,7 @@ const Contact: FC = () => {
             key={form.key('name')}
           />
           <TextInput
-            label="Email"
+            label="E-mail"
             placeholder="you@example.com"
             {...form.getInputProps('email')}
             withAsterisk
@@ -82,8 +89,8 @@ const Contact: FC = () => {
             key={form.key('email')}
           />
           <Textarea
-            label="Message"
-            placeholder="Write your message..."
+            label="Nachricht"
+            placeholder="Schreibe eine Nachricht..."
             minRows={4}
             autosize
             {...form.getInputProps('message')}
@@ -93,25 +100,31 @@ const Contact: FC = () => {
           />
           <Checkbox
             style={{ maxWidth: '400px' }}
-            label="I agree that this data may be stored and processed for the purpose of contacting me. I am aware that I can withdraw my consent at any time."
+            label="Ich bin damit einverstanden, dass diese Daten zum Zweck der Kontaktaufnahme gespeichert und verarbeitet werden. Mir ist bekannt, dass ich meine Einwilligung jederzeit widerrufen kann."
             {...form.getInputProps('gdpr', { type: 'checkbox' })}
           />
           <Group mt="md">
             <Button type="submit" loading={status === 'sending'}>
-              Send
+              Senden
             </Button>
           </Group>
 
-          {status === 'sent' && <Text c="primary.5">Message sent successfully!</Text>}
-          {status === 'error' && <Text c="red">Something went wrong. Please try again.</Text>}
+          {status === 'sent' && <Text c="primary.5">Nachricht erfolgreich gesendet!</Text>}
+          {status === 'error' && (
+            <Text c="red">Etwas ist schief gelaufen. Bitte versuche es noch einmal.</Text>
+          )}
         </form>
-        <Flex gap={'32px'} direction={'column'} align={{ base: 'center', sm: 'flex-start' }}>
+        <Flex
+          gap={'32px'}
+          direction={'column'}
+          align={{ base: 'center', sm: 'flex-start' }}
+          className={styles.otherContacts}
+        >
           <Text size="24px" ff={'Oswald'} c={'white'} fw={600} component="h3">
-            Or reach us at
+            Oder erreiche uns unter
           </Text>
-          <EmailCopy email="contact@g-emma.com" label="Email" />
-          <EmailCopy email="booking@g-emma.com" label="Booking" />
-          <LinkContainer className={styles.contactLinkContainer} />
+          <EmailCopy email="frago.mp3.music@gmail.com" />
+          <LinkContainer className={styles.contactLinkContainer} iconLinks={links} />
         </Flex>
       </MaxwidthContainer>
     </BackgroundSection>

@@ -26,9 +26,17 @@
     }
 }
 
+.otherContacts {
+    margin-top: -15%;
+
+    @media only screen and (max-width: $mantine-breakpoint-sm) {
+        margin-top: 0;
+    }
+
+}
+
 .contactLinkContainer {
     gap: 16px !important;
-    margin-top: 32px;
 
     svg {
         path {
