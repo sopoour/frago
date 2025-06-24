@@ -34,6 +34,7 @@ const Videos: FC = () => {
         <Flex
           key={video.title}
           direction={'column'}
+          justify={'center'}
           gap={{ base: 38, sm: 68 }}
           className={styles.videoContainer}
         >

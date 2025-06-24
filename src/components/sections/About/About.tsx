@@ -7,7 +7,7 @@ import useSWR from 'swr';
 import styles from './About.module.scss';
 import MaxwidthContainer from '@app/components/MaxwidthContainer/MaxwidthContainer';
 import BackgroundSection from '@app/components/BackgroundSection/BackgroundSection';
-import AboutImage from '@app/assets/About.png';
+import AboutImage from '@app/assets/About.jpg';
 import MarkdownConfig from '@app/components/MarkdownConfig/MarkdownConfig';
 
 const About: FC = () => {

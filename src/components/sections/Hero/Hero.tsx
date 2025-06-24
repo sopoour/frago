@@ -7,7 +7,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { scroller } from 'react-scroll';
 import ContentfulImage from '@app/lib/contentful-image';
 import { VisuallyHidden } from '@mantine/core';
-import HeroImage from '@app/assets/Titelbild.png';
+import HeroImage from '@app/assets/Titelbild.jpg';
 import { useMediaQuery } from '@mantine/hooks';
 
 const Hero = forwardRef<HTMLDivElement>((props, ref) => {
@@ -35,7 +35,7 @@ const Hero = forwardRef<HTMLDivElement>((props, ref) => {
             : HeroImage.src
         }
         fill
-        style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
+        style={{ objectFit: 'cover', objectPosition: '60% 20%' }}
         priority
         alt={'Hero Background'}
       />
