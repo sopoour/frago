@@ -13,7 +13,7 @@
     }
 
     @media only screen and (max-width: $mantine-breakpoint-sm) {
-        padding: 16px;
+        padding: 8px;
     }
 }
 
@@ -23,6 +23,7 @@
 
     @media only screen and (max-width: $mantine-breakpoint-sm) {
         flex-direction: column;
+        gap: 56px;
     }
 }
 

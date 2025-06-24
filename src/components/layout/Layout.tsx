@@ -75,7 +75,7 @@ const Layout: FC<Props> = ({ children }) => {
       }}
     >
       <AppShell.Header className={navbarClass}>
-        <Group h="100%" px="xl" w="100%">
+        <Group h="100%" px="lg" w="100%">
           <Flex
             align="center"
             style={{ flex: 1 }}
@@ -117,7 +117,7 @@ const Layout: FC<Props> = ({ children }) => {
             height: '45px',
             width: '52%',
             cursor: 'pointer',
-            paddingLeft: '25px',
+            paddingLeft: '32px',
             paddingTop: '4px',
           }}
           onClick={() => animateScroll.scrollTo(0, { smooth: true, duration: 800 })}
