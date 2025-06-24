@@ -300,7 +300,9 @@ export type GeneralContent = Entry & _Node & {
   aboutDescription?: Maybe<Scalars['String']['output']>;
   aboutImage?: Maybe<Asset>;
   contentfulMetadata: ContentfulMetadata;
+  datenschutz?: Maybe<Scalars['String']['output']>;
   heroImage?: Maybe<Asset>;
+  impressum?: Maybe<Scalars['String']['output']>;
   linkedFrom?: Maybe<GeneralContentLinkingCollections>;
   sys: Sys;
   version?: Maybe<Scalars['String']['output']>;
@@ -321,9 +323,21 @@ export type GeneralContentAboutImageArgs = {
 
 
 /** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/generalContent) */
+export type GeneralContentDatenschutzArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/generalContent) */
 export type GeneralContentHeroImageArgs = {
   locale?: InputMaybe<Scalars['String']['input']>;
   preview?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+
+/** [See type definition](https://app.contentful.com/spaces/jyysoswmf91z/content_types/generalContent) */
+export type GeneralContentImpressumArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
 };
 
 
@@ -358,7 +372,21 @@ export type GeneralContentFilter = {
   aboutDescription_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   aboutImage_exists?: InputMaybe<Scalars['Boolean']['input']>;
   contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
+  datenschutz?: InputMaybe<Scalars['String']['input']>;
+  datenschutz_contains?: InputMaybe<Scalars['String']['input']>;
+  datenschutz_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  datenschutz_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  datenschutz_not?: InputMaybe<Scalars['String']['input']>;
+  datenschutz_not_contains?: InputMaybe<Scalars['String']['input']>;
+  datenschutz_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   heroImage_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  impressum?: InputMaybe<Scalars['String']['input']>;
+  impressum_contains?: InputMaybe<Scalars['String']['input']>;
+  impressum_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  impressum_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+  impressum_not?: InputMaybe<Scalars['String']['input']>;
+  impressum_not_contains?: InputMaybe<Scalars['String']['input']>;
+  impressum_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   sys?: InputMaybe<SysFilter>;
   version?: InputMaybe<Scalars['String']['input']>;
   version_contains?: InputMaybe<Scalars['String']['input']>;

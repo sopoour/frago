@@ -60,7 +60,7 @@ const Layout: FC<Props> = ({ children }) => {
   }, [entry]);
 
   useEffect(() => {
-    router.pathname === '/impressum' || router.pathname === '/privacy-policy'
+    router.pathname === '/impressum' || router.pathname === '/datenschutz'
       ? setScrolled(true)
       : null;
   }, [router]);
@@ -136,7 +136,7 @@ const Layout: FC<Props> = ({ children }) => {
         <LinkContainer className={styles.linkContainerMobile} />
       </Sidebar>
       <AppShell.Main style={{ padding: '0' }}>
-        {router.pathname !== '/impressum' && router.pathname !== '/privacy-policy' && (
+        {router.pathname !== '/impressum' && router.pathname !== '/datenschutz' && (
           <Hero ref={ref} />
         )}
         {children}
@@ -162,8 +162,8 @@ const Layout: FC<Props> = ({ children }) => {
             <Text c={'grey.0'} fw={600} size="14px">
               |
             </Text>
-            <Anchor href="/privacy-policy" className={styles.footerLink} size="14px">
-              Privacy Policy
+            <Anchor href="/datenschutz" className={styles.footerLink} size="14px">
+              Datenschutz
             </Anchor>
           </Flex>
           <Flex gap={8} align={'center'} direction={{ base: 'column', sm: 'row' }}>
@@ -171,7 +171,7 @@ const Layout: FC<Props> = ({ children }) => {
               © {currentYear} FRAGO.
             </Text>
             <Text c={'grey.0'} size="14px">
-              Developed by{' '}
+              Entwickelt von{' '}
               <Anchor
                 c={'grey.0'}
                 size="14px"
