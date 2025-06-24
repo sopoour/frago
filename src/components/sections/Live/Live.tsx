@@ -1,4 +1,4 @@
-import { Flex, Grid, VisuallyHidden } from '@mantine/core';
+import { Flex, VisuallyHidden } from '@mantine/core';
 import { FC } from 'react';
 import useSWR from 'swr';
 import { LiveEvent } from '@app/services/graphql/types';
@@ -6,6 +6,7 @@ import { fetcher } from '@app/hooks/fetch/useFetch';
 import LiveSection from './elements/LiveSection';
 import MaxwidthContainer from '@app/components/MaxwidthContainer/MaxwidthContainer';
 import BackgroundSection from '@app/components/BackgroundSection/BackgroundSection';
+import styles from './Live.module.scss';
 
 const normalizeDate = (dateString: string) => {
   const date = new Date(dateString);
@@ -30,20 +31,14 @@ const Live: FC = () => {
 
   return (
     <BackgroundSection id="live" background="black">
-      <MaxwidthContainer id="live" size="md">
+      <MaxwidthContainer id="live" size="md" className={styles.liveContainer}>
         <VisuallyHidden component={'h2'}>Live Shows</VisuallyHidden>
-        <Flex
-          direction={'column'}
-          style={{ width: '100%', padding: '32px 0' }}
-          gap={{ base: '24px', sm: '40px' }}
-        >
-          {upcomingShows && upcomingShows?.length > 0 && (
-            <LiveSection title="Kommende Shows" shows={upcomingShows} shownEventsNumber={3} />
-          )}
-          {pastShows && pastShows?.length > 0 && (
-            <LiveSection title="Vergangene Shows" shows={pastShows} pastShows />
-          )}
-        </Flex>
+        {upcomingShows && upcomingShows?.length > 0 && (
+          <LiveSection title="Kommende Shows" shows={upcomingShows} shownEventsNumber={3} />
+        )}
+        {pastShows && pastShows?.length > 0 && (
+          <LiveSection title="Vergangene Shows" shows={pastShows} pastShows />
+        )}
       </MaxwidthContainer>
     </BackgroundSection>
   );
