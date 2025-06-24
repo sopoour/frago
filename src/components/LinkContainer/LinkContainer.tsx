@@ -54,7 +54,7 @@ const LinkContainer: FC<Props> = ({
             return {
               id: 'tiktok',
               icon: <FaTiktok />,
-              link: 'https://www.tiktok.com/@gemma.msc',
+              link: 'https://www.tiktok.com/@frago.mp3',
             };
           case 'spotify':
             return {
@@ -65,7 +65,7 @@ const LinkContainer: FC<Props> = ({
                 'https://open.spotify.com/artist/2exD65g1VYHPO0w4nMHAyO?si=KkAfIwDdREW5z9QIzzNkZA',
             };
           case 'email':
-            return { id: 'email', icon: <FaEnvelope />, link: 'mailto:contact@g-emma.com' };
+            return { id: 'email', icon: <FaEnvelope />, link: 'mailto:frago.mp3.music@gmail.com' };
           case 'instagram':
             return {
               id: 'instagram',

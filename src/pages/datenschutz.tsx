@@ -7,18 +7,18 @@ import { FC } from 'react';
 import useSWR from 'swr';
 
 const PrivacyPolicy: FC = () => {
-  /*  const { data: generalContentData, isLoading } = useSWR<GeneralContent | null>(
+  const { data: generalContentData, isLoading } = useSWR<GeneralContent | null>(
     '/api/generalContent',
     fetcher,
     {},
-  ); */
+  );
 
-  /* if (isLoading) {
+  if (isLoading) {
     return (
-      <section style={{ background: 'linear-gradient(220deg, #BDD3E8 0%, #F4F6FB 80%)' }}>
+      <section style={{ background: 'black' }}>
         <Container size="md" py="150px">
           <Stack gap={'40px'}>
-            <Skeleton height={40} width="60%" radius="sm" mt={32} /> 
+            <Skeleton height={40} width="60%" radius="sm" mt={32} />
             <Skeleton height={20} width="80%" />
             <Skeleton height={20} width="70%" />
             <Skeleton height={20} width="50%" />
@@ -31,14 +31,11 @@ const PrivacyPolicy: FC = () => {
         </Container>
       </section>
     );
-  } */
+  }
   return (
-    <BackgroundSection
-      id="privacy-policy"
-      background="linear-gradient(220deg, #BDD3E8 0%, #F4F6FB 80%)"
-    >
+    <BackgroundSection id="privacy-policy" background="black">
       <Container size="md" py={{ base: '80px', sm: '150px' }}>
-        {/*  <MarkdownConfig content={generalContentData?.privacyPolicy as string} /> */}
+        <MarkdownConfig content={generalContentData?.datenschutz as string} />
       </Container>
     </BackgroundSection>
   );

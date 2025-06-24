@@ -15,6 +15,8 @@ export default async function getGeneralContent(req: NextApiRequest, res: NextAp
             heroImage {
               url
             } 
+            impressum
+            datenschutz
         }
       }`,
     );

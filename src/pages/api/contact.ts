@@ -14,11 +14,11 @@ export default async function contact(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const data = await resend.emails.send({
-      from: 'Your Website <contact@g-emma.com>',
-      to: 'contact@g-emma.com',
-      subject: `New message from ${name}`,
+      from: 'Deine Website <onboarding@resend.dev>',
+      to: 'frago.mp3.music@gmail.com',
+      subject: `Neue Nachricht von ${name}`,
       replyTo: email,
-      text: `You received a new message:\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      text: `Du hast eine neue Nachricht erhalten:\n\nName: ${name}\nE-mail: ${email}\n\nNachricht:\n${message}`,
     });
 
     res.status(200).json({ success: true, data });

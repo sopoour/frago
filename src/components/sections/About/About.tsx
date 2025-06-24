@@ -8,13 +8,14 @@ import styles from './About.module.scss';
 import MaxwidthContainer from '@app/components/MaxwidthContainer/MaxwidthContainer';
 import BackgroundSection from '@app/components/BackgroundSection/BackgroundSection';
 import AboutImage from '@app/assets/About.png';
+import MarkdownConfig from '@app/components/MarkdownConfig/MarkdownConfig';
 
 const About: FC = () => {
   const { data, isLoading } = useSWR<GeneralContent | null>('/api/generalContent', fetcher);
 
   return (
-    <BackgroundSection id="about" background="black">
-      <MaxwidthContainer id="about">
+    <BackgroundSection id="über-uns" background="black">
+      <MaxwidthContainer id="über-uns">
         <VisuallyHidden component={'h2'}>About</VisuallyHidden>
         <SimpleGrid
           cols={{ base: 1, sm: 2 }}
@@ -31,10 +32,10 @@ const About: FC = () => {
               style={{ objectFit: 'cover' }}
             />
           </span>
-          <Text c={'white'} size="xl" fw={500} ta="justify">
-            {data?.aboutDescription ||
-              'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'}
-          </Text>
+          <MarkdownConfig
+            content={data?.aboutDescription as string}
+            className={styles.aboutDescription}
+          />
         </SimpleGrid>
       </MaxwidthContainer>
     </BackgroundSection>

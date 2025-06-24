@@ -5,7 +5,7 @@ import styles from './EmailCopy.module.scss';
 
 type Props = {
   email: string;
-  label: string;
+  label?: string;
 };
 
 const EmailCopy: FC<Props> = ({ email, label }) => {
@@ -18,7 +18,7 @@ const EmailCopy: FC<Props> = ({ email, label }) => {
 
   return (
     <Tooltip
-      label={copied ? 'Copied!' : 'Copy to clipboard'}
+      label={copied ? 'Kopiert!' : 'E-mail kopieren'}
       withArrow
       position="bottom"
       color="primary.9"
@@ -34,7 +34,7 @@ const EmailCopy: FC<Props> = ({ email, label }) => {
         className={styles.copyEmail}
         onMouseLeave={() => setCopied(false)}
       >
-        {label}: {email}
+        {label && `${label}:`} {email}
       </Text>
     </Tooltip>
   );
