@@ -1,6 +1,7 @@
 @use '../../styles/variables.module.scss' as *;
 
 .markdown {
+    color: white;
 
     li {
         line-height: 2;
@@ -35,5 +36,5 @@
         font-size: 1.17em;
     }
 
-    color: white;
+
 }
