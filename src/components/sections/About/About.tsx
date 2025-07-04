@@ -22,7 +22,7 @@ const About: FC = () => {
           spacing={{ base: 32, sm: 64 }}
           style={{ height: '75%', alignItems: 'center' }}
         >
-          <span style={{ position: 'relative' }}>
+          <span className={styles.aboutWrapper}>
             <ContentfulImage
               src={data?.aboutImage?.url || AboutImage.src}
               fill
@@ -31,6 +31,9 @@ const About: FC = () => {
               sizes="(max-width: 768px) 100vw"
               style={{ objectFit: 'cover' }}
             />
+            <Text c={'white'} size="xs" fw={500}>
+              Photo by {data?.aboutImage?.title}
+            </Text>
           </span>
           <MarkdownConfig
             content={data?.aboutDescription as string}
