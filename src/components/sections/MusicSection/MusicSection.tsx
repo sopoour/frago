@@ -34,8 +34,8 @@ const MusicSection: FC = () => {
   if (data && data?.length === 0) return null;
 
   return (
-    <BackgroundSection id="music" background={'black'}>
-      <MaxwidthContainer id="music" className={styles.musicSection}>
+    <BackgroundSection id="musik" background={'black'}>
+      <MaxwidthContainer id="musik" className={styles.musicSection}>
         <VisuallyHidden component={'h2'}>Music</VisuallyHidden>
         {sortedData && sortedData[activeCard].albumCollection && (
           <Text
