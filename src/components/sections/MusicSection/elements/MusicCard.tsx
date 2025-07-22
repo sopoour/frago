@@ -16,9 +16,16 @@ type Props = {
   activeIndex: number;
   musicIndex: number;
   onActiveCardChange: (index: number) => void;
+  musicAmount?: number;
 };
 
-const MusicCard: FC<Props> = ({ music, activeIndex, musicIndex, onActiveCardChange }) => {
+const MusicCard: FC<Props> = ({
+  music,
+  activeIndex,
+  musicIndex,
+  onActiveCardChange,
+  musicAmount,
+}) => {
   const ref = useRef<HTMLButtonElement>(null);
   const arrowRightPressed = useKeyPress('ArrowRight');
   const arrowLeftPressed = useKeyPress('ArrowLeft');
@@ -82,6 +89,7 @@ const MusicCard: FC<Props> = ({ music, activeIndex, musicIndex, onActiveCardChan
         isMobile
           ? {
               ...basicStyle,
+              margin: musicAmount === 1 ? '0 auto' : '0 12px 0 0',
             }
           : {
               ...basicStyle,

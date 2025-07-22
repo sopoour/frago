@@ -73,6 +73,7 @@ const MusicSection: FC = () => {
               key={music.musicTitle}
               data-index={index}
               onActiveCardChange={setActiveCard}
+              musicAmount={sortedData.length}
             />
           ))}
         </div>
