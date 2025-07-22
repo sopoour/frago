@@ -113,17 +113,11 @@ const MusicCard: FC<Props> = ({ music, activeIndex, musicIndex, onActiveCardChan
         style={{ objectFit: 'cover' }}
         ref={intersectionRef}
       />
-      <div
-        className={
-          !isMobile && !music.description
-            ? styles.musicCardNoDescription
-            : styles.musicCardContentMobile
-        }
-      >
-        <Text fw={600} ff={'Oswald'} size="18px" c={'primary.9'}>
+      <div className={styles.musicCardContentMobile}>
+        <Text fw={600} ff={'Oswald'} size="18px" c={'white'}>
           {music.musicTitle}
         </Text>
-        <LinkContainer iconLinks={mappedLinks} size="small" />
+        <LinkContainer iconLinks={mappedLinks} size="small" className={styles.linkContainerMusic} />
       </div>
     </Card>
   );

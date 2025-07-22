@@ -34,17 +34,10 @@ const MusicSection: FC = () => {
   if (data && data?.length === 0) return null;
 
   return (
-    <BackgroundSection
-      id="music"
-      background={
-        isMobile
-          ? 'linear-gradient(150deg, #bdd6b2 0%, #F4F6FB 80%)'
-          : 'linear-gradient(150deg, #bdd6b2 0%, #F4F6FB 50%)'
-      }
-    >
+    <BackgroundSection id="music" background={'black'}>
       <MaxwidthContainer id="music" className={styles.musicSection}>
         <VisuallyHidden component={'h2'}>Music</VisuallyHidden>
-        {sortedData && (
+        {sortedData && sortedData[activeCard].albumCollection && (
           <Text
             size={isMobile ? '24px' : '32px'}
             fw={600}
