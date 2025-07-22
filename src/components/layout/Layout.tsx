@@ -12,7 +12,7 @@ import { useRouter } from 'next/router';
 const navLinks = [
   { label: 'Live' },
   { label: 'Über uns' },
-  { label: 'Music' },
+  { label: 'Musik' },
   { label: 'Videos' },
   { label: 'Kontakt' },
 ];
