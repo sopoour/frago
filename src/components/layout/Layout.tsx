@@ -175,7 +175,7 @@ const Layout: FC<Props> = ({ children }) => {
               <Anchor
                 c={'grey.0'}
                 size="14px"
-                href="https://www.sophiaauer.me/"
+                href="https://www.fioauer.com/"
                 target="_blank"
                 className={styles.footerLink}
               >
