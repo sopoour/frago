@@ -104,7 +104,7 @@ const Contact: FC = () => {
             {...form.getInputProps('gdpr', { type: 'checkbox' })}
           />
           <Group mt="md">
-            <Button type="submit" loading={status === 'sending'}>
+            <Button type="submit" loading={status === 'sending'} className="defaultButton">
               Senden
             </Button>
           </Group>

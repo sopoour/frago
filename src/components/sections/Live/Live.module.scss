@@ -81,25 +81,3 @@
         font-size: 20px;
     }
 }
-
-.ticketButton {
-    padding: 4px 56px;
-    background-color: white;
-    color: black;
-    transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-
-    @media only screen and (max-width: $mantine-breakpoint-xs) {
-        --button-height: var(--button-height-sm) !important;
-        --button-padding-x: var(--button-padding-x-sm) !important;
-        --button-fz: var(--mantine-font-size-sm) !important;
-        padding: 4px 48px;
-    }
-
-    &:hover {
-        background-color: var(--mantine-color-primary-9);
-        color: white;
-    }
-}

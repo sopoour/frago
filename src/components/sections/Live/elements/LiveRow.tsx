@@ -49,7 +49,7 @@ const LiveRow: FC<Props> = ({ date, location, venue, ticketLink, ticketNotiz }) 
                 component="span"
                 size={'lg'}
                 radius={'xl'}
-                className={styles.ticketButton}
+                className="defaultButton"
               >
                 {date && normalizeDate(date) >= today ? 'Ticket' : 'Impressions'}
               </Button>
