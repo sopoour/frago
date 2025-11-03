@@ -97,6 +97,7 @@ const MusicCard: FC<Props> = ({
               display: Math.abs(activeIndex - musicIndex) > MAX_VISIBILITY ? 'none' : 'block',
               pointerEvents: activeIndex === musicIndex ? 'auto' : 'none',
               '--bg-content': music.description ? 'var(--mantine-color-grey-2)' : 'transparent',
+              cursor: music.description ? 'pointer' : 'default',
             }
       }
       ref={ref}

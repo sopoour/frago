@@ -180,6 +180,10 @@
         z-index: -1;
     }
 
+    .musicCardContentMobile {
+        opacity: 0;
+    }
+
     .musicCardContent {
         opacity: 1;
         transform: rotateY(180deg);
