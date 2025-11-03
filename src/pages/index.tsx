@@ -8,9 +8,9 @@ import { NextPage } from 'next';
 const Home: NextPage = () => {
   return (
     <>
+      <MusicSection />
       <Live />
       <About />
-      <MusicSection />
       <Videos />
       <Contact />
     </>

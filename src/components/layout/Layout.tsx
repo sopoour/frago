@@ -10,9 +10,9 @@ import Sidebar from '../Sidebar/Sidebar';
 import { useRouter } from 'next/router';
 
 const navLinks = [
+  { label: 'Musik' },
   { label: 'Live' },
   { label: 'Über uns' },
-  { label: 'Musik' },
   { label: 'Videos' },
   { label: 'Kontakt' },
 ];

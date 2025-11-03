@@ -43,7 +43,7 @@ const Hero = forwardRef<HTMLDivElement>((props, ref) => {
       <button
         className={styles.arrowButtonContainer}
         onClick={() =>
-          scroller.scrollTo('live', { smooth: true, duration: 800, offset: isMobile ? 0 : -100 })
+          scroller.scrollTo('musik', { smooth: true, duration: 800, offset: isMobile ? 0 : -100 })
         }
         title="Scroll down to see live"
       >
