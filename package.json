@@ -23,7 +23,7 @@
     "copy-to-clipboard": "^3.3.3",
     "graphql": "^16.10.0",
     "gsap": "^3.12.7",
-    "next": "15.3.4",
+    "next": "15.3.8",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-icons": "4.10.1",
