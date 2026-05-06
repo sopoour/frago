@@ -44,11 +44,10 @@ const LiveSection: FC<Props> = ({ title, shows, shownEventsNumber = 2, pastShows
           <div className={styles.showMore}>
             <Button
               onClick={() => setShowAll(true)}
-              variant="subtle"
+              variant="default"
               radius="md"
               rightSection={<IoIosArrowDown />}
               style={{
-                color: 'var(--mantine-color-primary-9)',
                 fontSize: '16px',
               }}
             >

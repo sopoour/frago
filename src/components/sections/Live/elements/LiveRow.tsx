@@ -54,7 +54,7 @@ const LiveRow: FC<Props> = ({ date, location, venue, ticketLink, ticketNotiz }) 
                 {date && normalizeDate(date) >= today ? 'Ticket' : 'Impressions'}
               </Button>
             ) : (
-              <Text c={'primary.9'} size="md">
+              <Text c={'white'} size="md">
                 {ticketNotiz}
               </Text>
             ))}
