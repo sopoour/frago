@@ -24,11 +24,7 @@ const Videos: FC = () => {
   if (data && data?.length === 0) return null;
 
   return (
-    <MaxwidthContainer
-      id="videos"
-      className={`${styles.videoSection} ${styles.hasOneVideo}`}
-      component={'section'}
-    >
+    <MaxwidthContainer id="videos" className={`${styles.videoSection}`} component={'section'}>
       <VisuallyHidden component={'h2'}>Videos</VisuallyHidden>
       {data?.map((video) => (
         <Flex
@@ -38,7 +34,7 @@ const Videos: FC = () => {
           gap={{ base: 38, sm: 68 }}
           className={styles.videoContainer}
         >
-          <Text c={'white'} size="24px" fw={600} ff="Oswald" component="h3">
+          <Text c={'white'} size="36px" fw={600} ff="Oswald" component="h3">
             {video.title}
           </Text>
           <iframe
