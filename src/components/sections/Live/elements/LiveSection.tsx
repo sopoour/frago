@@ -51,7 +51,7 @@ const LiveSection: FC<Props> = ({ title, shows, shownEventsNumber = 2, pastShows
                 fontSize: '16px',
               }}
             >
-              View all shows
+              Alle anzeigen
             </Button>
           </div>
         )}
